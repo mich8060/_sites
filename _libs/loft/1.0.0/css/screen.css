@@ -2473,8 +2473,8 @@ div[class*='col-'] {
 }
 /* line 263, ../sass/_components.scss */
 .btn.lg {
-  height: 50px;
-  line-height: 50px;
+  height: 45px;
+  line-height: 45px;
   padding: 0 40px;
 }
 /* line 269, ../sass/_components.scss */
