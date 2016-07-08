@@ -1,0 +1,133 @@
+@mixin breakpoint($point) {
+  	@if $point == mobile {
+    	@media only screen and (min-width: 0px) and (max-width: 600px) { @content; }
+  	}
+	@else if $point == tablet {
+		@media only screen and (min-width: 601px) and (max-width: 1100px) { @content; }
+	}
+	@else if $point == portrait {
+		@media only screen and (min-width: 601px) and (max-width: 900px) { @content; }
+	}
+	@else if $point == landscape {
+		@media only screen and (min-width: 901px) and (max-width: 1100px) { @content; }
+	}
+	@else if $point == desktop {
+		@media only screen and (min-width: 1101px) and (max-width: 1400px) { @content; }
+	}
+	@else if $point == huge {
+		@media only screen and (min-width: 1401px) { @content; }
+	}
+	@else if $point == retina {
+		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { @content; }
+	}
+}
+
+@mixin aspect-ratio($width, $height) {
+  	position: relative;
+  	&:before {
+    	display: block;
+    	content: "";
+    	width: 100%;
+    	padding-top: (($height / $width) * 100%) - 0.00001%;
+  	}
+
+  	> .content {
+    	position: absolute;
+    	top:0;
+    	left:0;
+    	right:0;
+    	bottom:0;
+  	}
+
+	> .content-centered {
+		position:absolute;
+		top:50%;
+		left:50%;
+		z-index:99;
+		
+		@include prefix("transform",translate(-50%,-50%));
+	}
+}
+
+// Cross Browser Inline-Block
+@mixin inline-block {
+  	display: inline-block; /* For normal, healthy browsers */
+ 
+  	* html & { /* for IE6 */
+    	display: inline;
+  	}
+ 
+  	*+html & { /* for IE7 */
+    	display: inline;
+  	}
+}
+
+@mixin ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+  	white-space: nowrap;
+}
+
+@mixin prefix($property, $value) {
+  @each $vendor in ('-webkit-', '-moz-', '-ms-', '-o-', '') {
+    #{$vendor}#{$property}: #{$value};
+  }
+}
+
+@function colors($key) {
+	@if not map-has-key($colors, $key) {
+    	@warn "Key `#{$key}` not found in $colors map.";
+  	}	
+  	@return map-get($colors, $key);
+}
+
+@function colorFamily($key) {
+	@if not map-has-key($colorFamily, $key) {
+    	@warn "Key `#{$key}` not found in $colorFamily map.";
+  	}	
+  	@return map-get($colorFamily, $key);
+}
+
+
+@function social($key) {
+	@if not map-has-key($social, $key) {
+    	@warn "Key `#{$key}` not found in $social map.";
+  	}	
+  	@return map-get($social, $key);
+}
+
+$colors: (
+	white:	#FFFFFF,
+	black:	#000000,
+	blue:	#5db5d7,
+	red:	#B11623,
+	orange: #e48325,
+	green: 	#7aac25,
+	gray-1:	#333333,
+	gray-2: #acacac,
+	gray-3: #dddddd,
+	gray-4: #e8e8e8,
+	gray-5: #eeeeee
+);
+
+$colorFamily: (
+	beige:	#EFB780,
+	black:	#000,
+	blue: 	#369,
+	brown:	#963,
+	gray:	#ccc,
+	green:	#093,
+	orange:	#f93,
+	pink:	#f39,
+	purple:	#639,
+	red:	#f00,
+	white:	#fff,
+	yellow:	#ff0
+);
+
+$social: (
+	twitter: 	#00aced,
+	facebook: 	#3b5998,
+	instagram: 	#517fa4,
+	google: #dd4b39
+);

@@ -1,0 +1,104 @@
+.toolbar {
+	background:colors(white);
+	border-bottom:solid 1px colors(gray-5);
+	height:65px;
+	left:0;
+	padding:20px 0 0 0;
+	position:fixed;
+	right:0;
+	top:0;
+	z-index:9999;
+	@include prefix('box-sizing',border-box);    
+	
+	&-back {
+  		display:block;
+		height:45px;
+		float:left;
+		position:relative; 
+		width:45px;
+		
+		&:before {
+			color:colors(black);
+			content:"\E045";
+			display:block;	
+		    font-family:'scicons';
+		    font-size: 9px;
+		    left: 6px;
+		    position: absolute;
+		    top: 11px;
+		}
+	}
+	
+	&-cart {
+		display:block;
+		height:45px;
+		float:right;
+		position:relative; 
+		width:45px;
+		
+		&:before {
+			color:colors(black);
+			content:"\E03a";
+			display:block;	
+		    font-family:'scicons';
+			left:15px;
+			position:absolute;
+			top:2px;
+		}	
+	}
+	
+	&-menu {
+		display:block;
+		height:45px;
+		float:left;
+		position:relative; 
+		width:45px;
+		
+		&:before {
+			color:colors(black);
+			content:"\E02a";
+			display:block;	
+		    font-family:'scicons';
+			font-size:10px;
+			left:12px;
+			position:absolute;
+			top:12px;
+		}
+	}
+	
+	&-search {
+		height:45px;
+		left:45px;
+		position:absolute;
+		right:45px;
+		
+		&:before {
+	    	font-family:'scicons';
+			color:colors(gray-2);
+			content:"\E044";
+			display:block;
+			font-size:14px;
+			height:20px;
+			left:8px;
+			line-height:5px;
+			position:absolute;
+			text-align:center;
+			top:10px;
+			width:20px;
+			z-index:9;
+			@include prefix("transform", scaleX(-1));
+		}
+	}
+}
+
+.back-on {
+	.toolbar {
+		&-search {
+			left:90px;
+		}
+	}
+}
+
+main {
+	padding:76px 10px 10px 10px;
+}

@@ -1,0 +1,796 @@
+
+body {
+	background:colors(gray-5);
+	
+	@include breakpoint(mobile) {
+		padding-top:90px;
+	}
+	
+	&.menu-open {
+		overflow:hidden;
+
+		header,
+		main {
+			@include prefix("transform", translate3d(280px,0,0));
+		}
+
+		overlay {
+			left:280px;
+			opacity:1;
+			visibility:visible;
+		}
+	}
+}
+
+/*  
+	Branding 
+	Last Edited: September 1, 2015
+	By: Michael Stevens
+*/
+
+.branding {
+	border:solid 3px colors(gold);
+	color:colors(black);
+	@include inline-block;
+	font-size:28px;
+	font-weight:600;
+	margin:10px auto;
+	padding:8px 10px;
+	position:relative;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: transparent;
+	
+	@include breakpoint(mobile){
+		font-size:24px;
+		margin:7px auto;
+		padding:4px 5px;
+	}
+	
+	&:hover {
+		color:colors(black);
+	}
+	
+	div {
+		font-size: 8px;
+		letter-spacing: 0.375em;
+		color:colors(gray-2);
+		margin-bottom:-2px;
+		margin-top:-5px;
+		text-indent:4px;
+		text-transform:uppercase;
+		
+		@include breakpoint(mobile){
+			font-size:7px;
+			margin-bottom:-4px;
+		}
+	}
+}
+
+dropdown {
+	background:colors(gray-5);
+	border-top:solid 1px colors(gray-4);
+	border-bottom:solid 1px colors(gray-4);
+	display:block;
+	left:0;
+	padding:40px 0;
+	position:absolute;
+	opacity:0;
+	right:0;
+	text-align:left;
+	visibility:hidden;
+	
+	&.active {
+		opacity:1;
+		visibility:visible;	
+	}
+	
+	a {
+		display:block;
+		font-size:14px;
+		padding:5px 0;
+	}
+	
+	strong {
+		display:block;
+		font-size:12px;
+		text-transform:uppercase;
+	}
+	
+	.col-lg-12 {
+		a {
+			@include inline-block;
+			padding:5px 10px;
+		}
+	}
+	
+	&.activities {
+		.col-lg-2 {
+			a {
+				background-size:cover;
+				font-weight:600;
+				letter-spacing:0.3em;
+				text-transform:uppercase;
+				position:relative;
+				
+				&:after {
+				    color:colors(white);
+					content:attr(data);
+					display:block;
+				    font-size:12px;
+				    left:50%;
+				    position:absolute;
+				    top:50%;
+				    white-space:nowrap;
+				
+					@include prefix("transform", translate(-50%,-50%));
+				}
+				
+				&:before {
+					background:rgba(34,34,34,0.5);
+				    content:"";
+				    padding-top: 50%;
+				    display: block;
+				    margin:-5px 0;
+				}
+			}
+		}
+	}
+
+	&.collections {
+		text-align:center;
+		
+		.collections {
+			&-headline {
+				color:colors(black);
+				font-weight:600;
+			}	
+			
+			&-subheadline {
+				color:colors(gray-2);
+			}
+		}
+		
+		img {
+			margin-bottom:10px;
+		}
+	}
+	
+}
+
+
+
+events {
+	background:colors(white);
+	border-bottom:solid 1px colors(gray-4);
+	display:none;
+	font-size:14px;
+	padding:0;
+	margin:0;
+	position:relative;
+	z-index:9;
+	
+	a {
+		@include inline-block;
+		padding:10px;
+	}
+	
+	.event {
+		cursor:pointer;
+		float:left;
+		@include inline-block;
+		padding:3px 10px 10px 10px;
+		
+		&:hover {
+			span {
+				&:before {
+					color:colors(black);
+				}
+			}
+			
+			.event {
+				&-menu {
+					opacity:1;
+					visibility:visible;
+					@include prefix("user-select",auto);
+				}
+			}
+		}
+		
+		&-menu {
+			background:colors(white);
+			margin:10px 0 0 0;
+			opacity:0;
+			padding:10px;
+			position:absolute;
+			visibility:hidden;
+			width:600px;
+			z-index:9999999;
+			@include prefix("user-select",none);
+			@include prefix("border-radius",2px);
+			@include prefix("box-shadow",(0 1px 2px rgba(colors(black),.25),0 0 1px rgba(colors(black),.35)));
+			@include prefix("transition-duration", 0.3s);
+			@include prefix("transition-property", (opacity, visibility));
+			@include prefix("transition-timing-function", ease);
+			
+			&:before {	
+			    background:colors(white);
+				content: '';
+			    display:block;
+				left:30px;
+				position:absolute;
+			    height:10px;
+				top:-4px;
+			    width:10px;
+				transform: rotate(45deg);
+				    box-shadow: -1px -1px 1px -1px rgba(0,0,0,.44);
+			};
+			
+			h5 {
+				border-bottom:solid 1px colors(gray-4);
+				margin:10px 0;
+				padding:5px 0;
+			}
+			
+			a {
+				&:not(.btn){
+					display:block;
+					line-height:16px;
+					padding:5px 20px 10px 0;
+				}
+			}
+		}
+	}
+	
+	.wilds-icons {
+		left:-5px;
+		top:5px;
+		@include inline-block;
+		
+		&:before {
+			font-size:8px;
+			height:20px;
+			line-height:20px;
+			width:20px;
+			@include prefix("transition", color 0.3s ease);
+		}
+	}
+}
+
+footer {
+	background:colors(gray-4);
+	color:colors(black);
+	clear:both;
+	position:relative;
+	
+	.footer {		
+		&-app {
+			padding:50px 0;
+			
+			@include breakpoint(mobile){
+				margin:0 auto;
+				padding:20px 0;
+				width:240px;
+			}
+			
+			a {
+				border:none;
+				padding:0;
+			}
+			
+			img {
+				background:colors(white);
+				border:solid 1px colors(gray-4);
+				float:left;
+				line-height:14px;
+				margin:-10px 10px 0 0;
+				padding:5px;
+				width:50px;
+				
+				@include prefix("border-radius", 12px);
+			}
+		}
+		&-cap {
+			background:colors(white);
+			border-top:solid 2px colors(white);
+			color:colors(gray-3);
+			font-size:14px;
+			line-height:16px;
+			padding:10px;
+			text-align:center;
+			
+			@include breakpoint(mobile){
+				span {
+					display:block;
+				}
+			}
+			
+			a {
+				padding:0 5px;
+				border:none;
+				@include inline-block;
+			}
+		}
+		&-pillars {
+			background:colors(gray-4);
+			border-bottom:solid 2px colors(white);
+			border-top:solid 2px colors(white);
+			padding:40px 0;
+			
+			.col-lg-4 {
+				&:last-child {
+					a {
+						border-right:none;
+					}
+				}
+			}
+			
+			a {
+				border:none;
+				border-right:solid 1px colors(gray-4);
+				text-align:center;
+				
+
+
+				&:hover {
+					color:colors(black);
+				}
+			}
+		}
+		&-social {
+			padding:0 15px;
+			
+			@include breakpoint(mobile){
+				padding:15px;
+				text-align:center;
+			}
+			
+			a {
+				border:none;
+				color:colors(black);
+				@include inline-block;
+				margin-right:5px;
+				padding:0 5px;
+				@include prefix("border-radius", 2px);
+			}
+		}
+	}
+	
+	strong {
+		display:block;
+		padding:0 0 10px 0;
+		
+		@include breakpoint(mobile){
+			border-bottom:solid 1px colors(white);
+			font-weight:normal;
+			padding:10px 20px;
+			position:relative;
+			
+			&:after {
+				content:"\E002";
+				display:block;
+			    font-family:'bcsicons';
+				position:absolute;
+				right:15px;
+				top:22%;
+			}
+			
+			& + .accordion {
+				display:none;
+			}
+		}
+	}
+	
+	
+	a {
+		color:colors(gray-1);
+		display:block;
+		padding:5px 0;
+		
+		@include breakpoint(mobile){
+			border-bottom:solid 1px colors(white);
+			color:colors(black);
+			padding:10px 20px;
+		}
+	}
+}
+
+header {
+	background:colors(white);
+	font-weight:100;
+	position:relative;
+	text-align:center;
+	z-index:9;
+	@include prefix("transition", transform 0.3s ease);
+	
+	@include breakpoint(mobile){
+		border-bottom:solid 1px colors(gray-4);
+		position:fixed;
+		left:0;
+		right:0;
+		top:0;
+	}
+	
+	.global {
+		background:colors(gray-4);
+		color:colors(gray-1);
+		font-size:12px;
+		font-weight:500;
+		padding:5px;
+		text-transform:uppercase;
+		
+		@include breakpoint(mobile){
+			span {
+				display:none;
+			}
+		}
+	}
+	
+	.iconography {
+		display:none;
+		position:relative;
+		
+		.icons {
+			&:before { position:absolute; top:22px; }
+			
+			&[type="search"]:before{right:55px;}
+			&[type="cart"]:before{right:15px;}
+			&[type="menu"]:before{left:15px;}
+		}
+		
+		@include breakpoint(mobile){
+			display:block;
+		}
+	}
+}
+
+main {
+	background:colors(white);
+	min-height:800px;
+	position:relative;
+	z-index:8 ;
+	@include prefix("transition", transform 0.3s ease);
+	
+	@include breakpoint(portrait){
+		min-height:1024px;
+	}
+}
+
+menu {
+	background:colors(gray-4);
+	position:fixed;
+	top:0;
+	left:0;
+	bottom:0;
+	width:280px;
+	
+	.menu {
+		
+		&-contact {
+			background:colors(white);
+			padding:30px;
+			text-align:center;
+			
+			.btn {
+				margin-left:5px;
+				margin-right:5px;
+			}
+		}
+		
+		&-navigation {
+			&.list {
+				a {
+					background:colors(white);
+					border:solid 1px colors(gray-4);
+					color:colors(black);
+					display:block;
+					padding:10px 30px;	
+
+					&:after {
+						@include inline-block;
+						font-family: 'entypo', sans-serif;
+						content:"\E75E";
+						float:right;
+					}
+				}	
+			}
+			
+			a {
+				.collections {
+					&-title {
+						background:colors(white);
+						color:colors(black);
+						font-size:16px;
+						line-height:16px;
+						margin-bottom:20px;
+						padding:10px 30px;
+					}
+					
+					&-headline,
+					&-subheadline { 
+						overflow: hidden;
+						text-overflow: ellipsis;
+						white-space: nowrap;
+					}
+					
+					&-subheadline {
+						color:colors(gray-1);
+					}
+				}
+
+			}
+		}
+		
+		&-toolbar {
+			background:colors(white);
+			border-bottom:solid 1px colors(gray-4);
+			padding:10px 20px 10px 30px; 
+			text-align:right;
+			
+			&.subsection {
+				background:transparent;
+				border:none;
+				font-weight:bold;
+				padding:10px 5px;
+				text-align:left;
+				
+				a {
+					color:colors(black);	
+				}
+			}
+			
+			.avatar {
+				margin-left:10px;
+			}
+		}
+		
+		&-window {
+			position:absolute;
+			top:0;
+			left:0;
+			right:0;
+			bottom:0;
+			overflow:scroll; 
+			overflow-y: scroll; 
+			overflow-x: hidden; 
+			@include prefix("overflow-scrolling",touch);
+			@include prefix("transform", translate3d(100%,0,0));
+			@include prefix("transition", transform 0.3s ease);
+			
+			&.active {
+				@include prefix("transform", translate3d(0,0,0));
+			}
+		}
+	}
+}
+
+nav {
+	border-bottom:solid 1px colors(gray-4);
+	border-top:solid 1px colors(gray-4);
+	display:block;
+	padding:0 10px;
+	z-index:9;
+	
+	@include breakpoint(mobile){
+		display:none;
+	}
+	
+	&:after {
+		clear:left;
+		content:"";
+		display:block;
+		height:0;
+	}
+	
+	ul {
+		@include inline-block;
+		list-style-type:none;
+		margin:0 auto -5px;
+		padding:0;
+		
+		li {
+			@include inline-block;
+			float:left;
+			list-style-type:none;
+			
+			&:hover {
+				dropdown {
+					opacity:1;
+					visibility:visible;
+				}
+				
+				.primary {
+					&:after {
+						background:colors(gold);
+						content:"";
+						display:block;
+						width:100%;
+						height:1px;
+					}
+				}
+			}
+			
+			&.selected {
+				.primary {
+					&:after {
+						background:colors(gray-1);
+						content:"";
+						display:block;
+						width:100%;
+						height:1px;
+					}
+				}
+			}
+			
+			.primary {
+				cursor:pointer;
+				display:block;
+				font-size:12px;
+				font-weight:700;
+				margin-bottom:-1px;
+				padding:9px 40px;
+				text-align:left;
+				text-transform:uppercase;
+				
+				span {
+					text-transform:lowercase;
+				}
+			}
+		}
+	}
+
+}
+
+overlay {
+	background:rgba(colors(black),0.5);
+	bottom:0;
+	display:block;
+	left:0;
+	right:0;
+	opacity:0;
+	position:fixed;
+	top:0;
+	visibility:hidden;
+	z-index:99999;
+	
+	@include prefix("transition", all 0.3s ease);
+}
+
+/*  
+	Search Bar
+	Location: Header Block
+	Last Edited: Februray 15, 2016
+	By: Michael Stevens
+*/
+
+steal {
+	display:block;
+	position:absolute;
+	line-height:12px;
+	left:10px;
+	font-size:12px;
+	font-weight:500;
+	text-align:left;
+	top:30px;
+	width:300px;
+	
+	@include breakpoint(mobile){
+		display:none;
+	}
+	
+	.steal {
+		overflow:hidden;
+		
+		a {
+			display:block;
+		}
+		
+		&-branding {
+			border:solid 2px colors(gold);
+			@include inline-block;
+			float:left;
+			font-weight:700;
+			padding:3px;
+		}
+		
+		&-brand {
+			color:colors(black);
+		}
+		
+		&-title {
+			font-weight:400;
+		}
+	}
+	
+	img {
+		float:left;
+		@include inline-block;
+		position:relative;
+		margin:0 10px;
+		top:-10px;
+		width:40px;
+	}
+}
+
+search {
+	@include inline-block;
+	margin:20px 0 0 10px;
+	padding:0 10px;
+	position:relative;
+	float:right;
+	width:220px;
+	
+	@include breakpoint(mobile){
+		display:none;
+	}
+	
+	input[type="search"]{
+		font-size: 14px;
+		padding:8px 15px;
+	}
+	
+	.icons {
+		position:relative;
+		
+		&:before {
+			font-size: 14px;
+			left:8px;
+			position: absolute;
+			top: -25px;
+		}
+	}
+}
+
+textbanner {
+	background:colors(gray-4);
+	border-bottom:solid 1px colors(white);
+	color:colors(gray-2);
+	display:block;
+	font-size:16px;
+	padding:6px;
+	position:relative;
+	text-align:center;
+	z-index:9;
+}
+
+
+/*  
+	Utilities
+	Location: Header Block
+	Last Edited: Februray 15, 2016
+	By: Michael Stevens
+*/
+
+utilities {
+	display:block;
+	position:absolute;
+	right:0;
+	text-align:left;
+	@include prefix("box-sizing",border-box);
+	
+	@include breakpoint(mobile){
+		display:none;
+	}
+	
+	a {
+		@include inline-block;
+		font-size:12px;
+		font-weight:400;
+		padding:28px 15px 20px 15px;
+		position:relative;
+		
+		span {
+			color:colors(black);
+			border:solid 2px colors(gold);
+			@include inline-block;
+			font-size:10px;
+			font-weight:700;
+			line-height:16px;
+			height:15px;
+			margin-right:5px;
+			text-align:center;
+			width:15px;
+			@include prefix("border-radius", 20px);
+		}	
+
+	}
+}

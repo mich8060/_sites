@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<title>Test</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" />
+<link rel="stylesheet" href="http://localhost:8888/_sites/_libs/bcs/4.0.1/css/screen.css" />
+<link rel="stylesheet" href="http://localhost:8888/_sites/_libs/bcs/4.0.1/css/editor.css" />
+</head>
+<body version="1.0" site="bcs">
+<div class="editor-window">
+	<div class="editor-manager">
+		<div class="editor-manager-controller">
+			<a href="#" type="share">Share</a>
+			<a href="#" type="publish">Publish...</a>
+			<a href="#" type="more">...</a>
+			<a href="#" type="author" class="avatar sm male"></a>
+		</div>
+		<a href="#" class="editor-manager-branding"><img src="img/layout/backcountry@3x.png" alt="" /></a>
+		<div class="editor-status">Draft</div>
+		<div class="editor-manager-publish">
+			<div class="editor-manager-section editor-manager-publish-default">
+				<h3>Ready to publish?</h3>
+				<p class="sm">Add or remove tags so people can find your story via different methods.</p>
+				<hr />
+				<a href="#" class="btn">Publish</a>
+				<div>
+					<p class="xs editor-manager-tab"><a href="#">Scheduling: None</a></p>
+					<p class="xs editor-manager-tab"><a href="#">Visibility: Private</a></p>
+					<p class="xs editor-manager-tab"><a href="#">Template: Article</a></p>
+				</div>
+			</div>
+			<div class="editor-manager-section editor-manager-publish-scheduling">
+				<input type="radio" id="unscheduled" name="schedule" checked="checked" />
+				<label for="unscheduled">
+					Not scheduled
+					<p class="xs">The story will be published when you click Publish.</p>
+				</label>
+				<input type="radio" id="scheduled" name="schedule" />
+				<label for="scheduled">
+					Scheduled to be published on
+					<input type="datetime-local" required="true" min="2000-01-01T01:00" max="2099-12-31T01:00" value="2016-03-16T12:48" />
+				</label>
+				<p class="xs">
+					The story will be published automatically within five minutes of the specified time.
+				</p>
+				<a href="#" class="btn">Save</a>
+				<a href="#" class="editor-manager-cancel">Cancel</a>
+			</div>
+			<div class="editor-manager-section editor-manager-publish-visibility">
+				<input type="radio" id="unvisible" name="visibility" checked="checked" />
+				<label for="unvisible">
+					Private
+					<p class="xs">The story will only be visible to those with the link. It won’t be listed on any public pages.</p>
+				</label>
+				<input type="radio" id="visible" name="visibility" />
+				<label for="visible">
+					Public
+					<p class="xs">The story will be accessible to everyone.</p>
+				</label>
+				<a href="#" class="btn">Save</a>
+				<a href="#" class="editor-manager-cancel">Cancel</a>
+			</div>
+			<div class="editor-manager-section editor-manager-publish-template">
+				<input type="radio" id="article" name="template" checked="checked" />
+				<label for="article">
+					Article
+					<p class="xs">The story will only be listed within the articles section of the website.</p>
+				</label>
+				<input type="radio" id="collection" name="template" />
+				<label for="collection">
+					Collection
+					<p class="xs">The story will only be listed within the collections section of the website.</p>
+				</label>
+				<input type="radio" id="page" name="template" />
+				<label for="page">
+					Page
+					<p class="xs">This story will only be accessible via direct url linking.</p>
+				</label>
+				<a href="#" class="btn">Save</a>
+				<a href="#" class="editor-manager-cancel">Cancel</a>
+			</div>
+		</div>
+	</div>
+	<div class="editor-grid-format">
+		<a href="#" class="icons" type="full"></a>
+		<a href="#" class="icons" type="wide"></a>
+		<a href="#" class="icons" type="normal"></a>
+		<a href="#" class="icons" type="grid-stacked"></a>
+	</div>
+	<div class="editor-format">
+        <a href="#" class="control icons" type="bold"></a>
+        <a href="#" class="control icons" type="italic"></a>
+        <a href="#" class="control icons" type="createLink"></a>
+        <a href="#" class="control icons" type="h2"></a>
+        <a href="#" class="control icons" type="h3"></a>
+        <a href="#" class="control icons" type="blockquote"></a>
+		<a href="#" class="control icons" type="align-left"></a>
+    </div>
+	<div class="editor-media">
+		<a href="#" class="icons" name="Photo" type="camera"></a>
+		<a href="#" class="icons" name="Video" type="video"></a>
+		<a href="#" class="icons" name="Grid" type="grid"></a>
+		<a href="#" class="icons" name="List" type="list"></a>
+		<a href="#" class="icons" name="Product" type="shop"></a>
+		<a href="#" class="icons" name="Shop Look" type="look"></a>
+		<a href="#" class="icons" name="Article" type="align-left"></a>
+		<div class="editor-media-inputs">
+			<input type="file" class="media-photo-upload" />
+			<input type="file" class="media-hero-upload" />
+			<input type="file" class="media-grid-upload" />
+			<input type="file" class="grid-photo-upload" />
+			<img src="" alt="" class="media-image-exists" />
+		</div>
+	</div>
+	<div class="editor-photo-layout">
+		<a href="#" class="icons" type="full"></a>
+		<a href="#" class="icons" type="wide"></a>
+		<a href="#" class="icons" type="left"></a>
+		<a href="#" class="icons" type="normal"></a>
+		<a href="#" class="icons" type="right"></a>
+		<a href="#" class="icons" type="slideshow"></a>
+	</div>
+	<div class="editor-hero">
+		<div class="editor-hero-content">
+			Add Hero Image
+		</div>
+	</div>
+	<div class="editor" contenteditable="true" autocorrect="false" autocapitalize="false" spellcheck="false">
+		<h1>Why You Need a Quiver of Running Shoes</h1>
+		<div class="editor-author" contenteditable="false">
+			<div class="avatar"></div>
+			<span class="editor-author-info">
+				<div class="editor-author-name">Michael Stevens</div>
+				<div>2 days ago &ndash; <span class="editor-read">1</span> min read</div>
+			</span>
+			<div class="clear"></div>
+		</div>
+		<p class="edit">
+			There is a reason I am known among my friends as the “Shoemelier” and the “Imelda of Running.” 
+			As a gear editor for a number of publications, I’ve had the chance to test more than a thousand 
+			running shoes over the years, which probably hasn’t helped. That being said, I still believe 
+			that there are very good reasons why you too should have your own ‘quiver’ (in sporting parlance, 
+			a collection of different types of a piece of sporting equipment) of running shoes.
+		</p>
+		<p class="edit">
+			A die-hard skier has her quiver. It includes powder pontoons, all-mountain cruisers, a skimo setup 
+			for ascending, and classic and skate Nordic skinny skis. She may also have rock skis and skis that 
+			are stiffer or softer for different conditions. Similarly, a serious cyclist has his full-suspension 
+			MTB, cyclocross, road, commuter, townie/cruiser/vintage bikes, and may even have a new fat bike.
+		</p>
+		<p class="edit">
+			Runners are no different. They need a quiver of running shoes as well.
+		</p>
+		<p class="edit">
+			A runner’s quiver should include everyday training shoes, at least one 
+			pair for trail and another for road. It should also include lightweight 
+			speed and racing shoes as well as recovery kicks and a pair of foul-weather shoes.
+		</p>
+	</div>
+</div>
+<script src="http://localhost:8888/_sites/_libs/bcs/4.0.1/js/jquery-1.12.3.min.js"></script>
+<script src="http://localhost:8888/_sites/_libs/bcs/4.0.1/js/jquery.bcs.js"></script>
+<script src="http://localhost:8888/_sites/_libs/bcs/4.0.1/js/jquery.editor.js"></script>
+</body>
+</html>

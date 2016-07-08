@@ -1,0 +1,97 @@
+/* line 3, ../sass/prototype.scss */
+.recommendations {
+  clear: left;
+  float: left;
+  padding: 20px 60px 20px 10px;
+  width: 40%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media only screen and (min-width: 0px) and (max-width: 600px) {
+  /* line 3, ../sass/prototype.scss */
+  .recommendations {
+    clear: both;
+    float: none;
+    padding: 0;
+    width: 100%;
+  }
+}
+/* line 17, ../sass/prototype.scss */
+.recommendations h5 {
+  margin-bottom: 20px;
+}
+/* line 21, ../sass/prototype.scss */
+.recommendations.block {
+  clear: none;
+  float: right;
+  padding: 20px 0;
+  width: 60%;
+}
+@media only screen and (min-width: 0px) and (max-width: 600px) {
+  /* line 21, ../sass/prototype.scss */
+  .recommendations.block {
+    clear: both;
+    display: none;
+    float: none;
+    padding: 0;
+    width: 100%;
+  }
+}
+/* line 35, ../sass/prototype.scss */
+.recommendations.block h5 {
+  text-align: center;
+}
+@media only screen and (min-width: 0px) and (max-width: 600px) {
+  /* line 35, ../sass/prototype.scss */
+  .recommendations.block h5 {
+    text-align: left;
+  }
+}
+/* line 43, ../sass/prototype.scss */
+.recommendations.block .listing {
+  width: 33.3%;
+}
+/* line 46, ../sass/prototype.scss */
+.recommendations.block .listing-image {
+  padding: 25px 30px;
+}
+
+/* line 53, ../sass/prototype.scss */
+.collection {
+  border: solid 1px #dddddd;
+  display: block;
+  margin-bottom: 20px;
+}
+/* line 58, ../sass/prototype.scss */
+.collection-discount {
+  background: #7aac25;
+  color: #FFFFFF;
+  float: left;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  padding: 7px 10px;
+  position: relative;
+  margin: 0 20px -10px 20px;
+  top: -15px;
+  z-index: 9;
+}
+/* line 71, ../sass/prototype.scss */
+.collection-discount span {
+  font-size: 14px;
+  line-height: 14px;
+}
+/* line 80, ../sass/prototype.scss */
+.collection-remaining {
+  color: #acacac;
+  font-size: 14px;
+  padding: 0 20px 10px 20px;
+}
+/* line 86, ../sass/prototype.scss */
+.collection-title {
+  font-size: 16px;
+  padding: 20px 20px 0 20px;
+}

@@ -1,0 +1,33 @@
+@import 'functions';
+@import 'animations';
+
+@keyframes blink {
+	0% {
+		@include prefix("transform", scale(1));
+	}
+	100% {
+		@include prefix("transform", scale(0.5));
+	}
+}
+
+@keyframes rotate {
+ 	100% {
+		@include prefix("transform", rotate(360deg));
+ 	}
+}
+
+@keyframes dash {
+ 	0% {
+  		stroke-dasharray: 1,700;
+  		stroke-dashoffset: 0;
+ 	}
+ 	50% {
+  		stroke-dasharray: 480,700;
+  		stroke-dashoffset: -160px;
+ 	}
+ 	100% {
+  		stroke-dasharray: 480,700;
+  		stroke-dashoffset: -630px;
+ 	}
+}
+

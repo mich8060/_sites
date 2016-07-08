@@ -1,0 +1,1 @@
+<div class="listing-options-blocks{type}{selected}">{options}</div>

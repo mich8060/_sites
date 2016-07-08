@@ -1,0 +1,1 @@
+<div class="filters"><img src="img/layout/filters.jpg" alt="" /></div>

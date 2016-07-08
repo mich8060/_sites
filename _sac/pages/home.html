@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" />
+<link rel="stylesheet" href="http://localhost:8888/_libs/sac/4.0.2/css/screen.css" />
+<link rel="stylesheet" href="css/prototype.css" />
+<title></title>
+</head>
+<body>
+<header globaltext="true"></header>
+<main site="true">
+	<div class="main-container">
+		<div class="container-lg">
+			<div class="col-lg-4 col-xs-12">
+				<a href="upcoming" class="steal" upcoming="false">
+					<div class="steal-head">
+						<div class="steal-head-title">Current Steal</div>
+						<div class="steal-head-counter">16:39</div>
+					</div>
+					<div class="steal-image">
+						<img src="http://www.backcountry.com/images/items/medium/ADA/ADA0048/BLAWHIGRE.jpg" alt="" />
+					</div>
+					<div class="steal-info">
+						<strong>Adidas</strong>       
+						<div class="steal-info-name">Climacool Boat Sleek Water Shoe - Women's</div>
+						<div class="steal-info-pricing">
+							<span class="steal-info-pricing-price">$35.97</span>
+							<span class="steal-info-pricing-discount">40% Off</span>
+						</div>
+					</div>
+					<div class="steal-remaining">      
+						<div class="steal-remaining-progress">
+							<div class="steal-remaining-progress-bar"></div>
+						</div>
+						<div class="steal-remaining-qty">22 of 30 Remaining...</div>
+					</div>
+					<div class="clear"></div>
+					<div class="steal-cap">
+						Steals coming up next...
+					</div>
+				</a>
+			</div>
+			<?php
+				$url = "https://www.steepandcheap.com/api/mobile/promotions";
+				$options = array(
+				    'http'=>array(
+				        'method'=>"GET",
+				        'header'=>"User-Agent: Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B334b Safari/531.21.102011-10-16 20:23:10\r\n" 
+				    )
+				);
+				$context = stream_context_create($options);
+				$json = json_decode(file_get_html($url,false,$context));
+				$count = 0;
+				foreach($json->data as $d){
+					if($count == 0){
+						echo '<div class="col-lg-8">';
+					}else{
+						echo '<div class="col-lg-4">';
+					}
+					echo '<a href="#" class="collection">';
+					echo '<div class="collection-image"><img src="'.$d->images->standard.'" alt="" /></div>';
+					echo '<div class="collection-discount">Up To<span> '.$d->longDescription.'% Off</span></div>';
+					echo '<div class="collection-title">'.$d->description.'</div>';
+					$now = new DateTime();
+					$future_date = new DateTime($d->endDate);
+					$interval = $future_date->diff($now);
+					echo '<div class="collection-remaining">'.$interval->format("%a days %h hours left").'</div>';
+					echo '</a>';
+					echo '</div>';
+					if($count == 0){
+						echo '<div class="col-lg-12">';
+						echo '<div class="spc-in-20"></div>';
+						echo '<div class="ad"></div>';
+						echo '</div>';
+						echo '<div class="col-lg-12 spc-btm-20">';
+						echo '<h3 class="green">Today\'s Top Collections</h3>';
+						echo '<h5>Our best picks</h5>';
+						echo '</div>';
+					}
+					if($count == 4){
+						echo '<div class="col-lg-12">';
+						echo '<div class="spc-in-20"></div>';
+						echo '</div>';
+						echo '<div class="col-lg-12 spc-btm-20">';
+						echo '<h3 class="green">Today\'s Collections</h3>';
+						echo '<h5>Deals on clothing and gear</h5>';
+						echo '</div>';
+					}
+					$count++;
+				}
+			
+			?>
+		</div>
+	</div>
+</main> 
+<script src="http://design.backcountry.com/_libs/sac/4.0.1/js/jquery-1.12.3.min.js"></script>   
+<script src="http://design.backcountry.com/_libs/sac/4.0.1/js/jquery.sac.js"></script>
+</body>
+</html>

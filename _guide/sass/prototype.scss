@@ -1,0 +1,464 @@
+@import 'base';
+
+.no-scroll {
+	overflow:hidden;
+}
+
+.look {
+	display:block;
+	float:left;
+	padding:10px;
+	width:25%;
+	@include prefix("box-sizing",border-box);
+	
+	@include breakpoint(portrait){
+		width:50%;
+	}
+	
+	@include breakpoint(mobile){
+		width:100%;
+	}
+	
+	&:hover {
+		.look {
+			&-images {
+				img {
+					&:last-of-type {
+						opacity:0;
+					}
+				}
+			}
+		}
+	}
+	
+	&.open-dialog {
+		&:before {
+			background:rgba(colors(black),0.5);
+			bottom:0;
+			content:"";
+			display:block;
+			left:0;
+			position:fixed;
+			top:0;
+			right:0;
+			z-index:9999;
+		}
+		
+		.look {
+			&-dialog {
+				display:block;
+			}
+		}
+	}
+	
+	&-action {
+		border-top:solid 1px colors(gray-4);
+		color:colors(black);
+		display:block;
+		font-size:15px;
+		line-height:40px;
+		margin-top:10px;
+		text-align:center;
+	}
+	
+	&-badge {
+		border:solid 1px colors(white);
+		bottom:20px;
+		color:colors(white);
+		height:50px;
+		font-size:12px;
+		line-height:10px;
+		padding:10px;
+		position:absolute;
+		right:20px;
+		text-align:center;
+		width:50px;
+		z-index:999;
+		@include prefix("box-sizing",border-box);
+		@include prefix("border-radius", 50px);
+		
+		span {
+			 display:block;
+		}
+	}
+	
+	&-details {
+		background:colors(white);
+		padding:10px 0 0 0;
+	}
+	
+	&-dialog {
+		background:colors(white);
+		display:none;
+		left:50%;
+		max-width:1200px;
+		overflow:hidden;
+		position:fixed;
+		top:50%;
+		width:90%;
+		z-index:99999;
+		@include prefix("transform",translate(-50%,-50%));
+		
+		@include breakpoint(mobile){
+			bottom:0;
+			left:0;
+			overflow:scroll; 
+			overflow-y: scroll; 
+			overflow-x: hidden;
+			right:0;
+			top:0;
+			width:100%;
+			@include prefix("transform",translate(0%,0%));
+		}
+		
+		@include breakpoint(portrait){
+			bottom:20px;
+			left:80px;
+			overflow:scroll; 
+			overflow-y: scroll; 
+			overflow-x: hidden;
+			right:80px;
+			top:20px;
+			width:auto;
+			@include prefix("transform",translate(0%,0%));
+		}
+		
+		&-action {
+			background:colors(white);
+			border-top:solid 1px colors(gray-3);
+			bottom:0;
+			padding:10px;
+			position:absolute;
+			right:0;
+			text-align:center;
+			width:54%;
+			@include prefix("box-sizing",border-box);
+			
+			@include breakpoint(mobile){
+				clear:both;
+				position:static;
+				width:100%;
+			}
+			
+			@include breakpoint(portrait){
+				clear:both;
+				position:static;
+				width:100%;
+			}
+		}
+		
+		&-close {
+			
+			@include breakpoint(mobile){
+				position:fixed;
+				right:10px;
+				top:10px;
+			}
+			
+			@include breakpoint(portrait){
+				position:fixed;
+				right:10px;
+				top:10px;
+			}
+			
+			&:before {
+				color:colors(gray-2);
+				content:"\E012";
+				cursor:pointer;
+				display:block;
+			    font-family:'bcsicons';
+				position:absolute;
+				top:20px;
+				right:20px;
+				
+				@include breakpoint(mobile){
+					position:fixed;
+					background:colors(white);
+					padding:10px;
+					right:10px;
+					top:10px;
+				}
+				
+				@include breakpoint(portrait){
+					position:fixed;
+					background:colors(white);
+					padding:10px;
+					right:10px;
+					top:10px;
+				}
+			}
+		}
+		
+		&-images {
+			float:left;
+			position:relative;
+			width:46%;
+			@include prefix("box-sizing",border-box);
+			
+			@include breakpoint(mobile){
+				float:none;
+				width:100%;
+			}
+			
+			@include breakpoint(portrait){
+				float:none;
+				width:100%;
+			}
+			
+			img {
+				&:last-of-type {
+					position:absolute;
+					top:0px;
+					left:0;
+					right:0;
+					@include prefix("transition", opacity 0.3s ease);
+				}
+			}
+		}
+		
+		&-products {
+			bottom:0;
+			float:left;
+			overflow:scroll; 
+			overflow-y: scroll; 
+			overflow-x: hidden;
+			padding:20px;
+			position:absolute;
+			right:0;
+			top:0;
+			width:54%;
+			@include prefix("overflow-scrolling",touch);
+			@include prefix("box-sizing",border-box);
+			
+			@include breakpoint(mobile){
+				overflow:auto; 
+				overflow-y:auto; 
+				overflow-x:auto;
+				position:static;
+				width:100%;
+			}
+			
+			@include breakpoint(portrait){
+				overflow:auto; 
+				overflow-y:auto; 
+				overflow-x:auto;
+				position:static;
+				width:100%;
+			}
+			
+			.listing {
+				width:33.3%;
+				@include aspect-ratio(3,4.3);
+				
+				@include breakpoint(mobile){
+					@include aspect-ratio(3,5.25);
+					width:50%;
+				}
+				
+				.btn {
+					opacity:0;
+					@include prefix("transition", opacity 0.3s ease 0.2s);
+					
+					@include breakpoint(mobile){
+						opacity:1;
+					}
+				}
+				
+				&.long {
+					.listing {
+						&-options {
+							&-arrows {
+								display:block;
+							
+								&:first-of-type {
+									display:none;	
+								}
+							}
+						}	
+					}
+				}
+				
+				&:hover {
+					
+					.btn {
+						opacity:1;
+					}
+					
+					.listing {
+						&-details {
+							bottom:-65px;
+						}
+						
+						&-options {
+							opacity:1;
+						}
+						
+						&-swatches {
+							opacity:1;
+						}
+					}
+				}
+				
+				&-details {
+					@include prefix("transition-property", (bottom, border, margin, padding, z-index));
+				}
+				
+				&-gallery {
+					li {
+						width:80%;
+					}
+				}
+				
+				&-options {
+					opacity:0;
+					padding:5px;
+					position:relative;
+					@include prefix("transition", opacity 0.3s ease 0.2s);
+					
+					@include breakpoint(mobile){
+						opacity:1;
+					}
+					
+					&-arrows {
+						bottom:7px;
+						display:none;
+						position:absolute;
+						right:0;
+						top:7px;
+						z-index:999;
+						
+						
+						&:first-of-type {
+							display:none;
+							right:auto;
+							left:0;
+							
+							&:before {
+								content:'\E003';
+							}
+						}
+						
+						&:hover {
+							&:before {
+								border:solid 1px colors(black);
+							}
+						}
+						
+						&:before {
+							background:colors(white);
+							border:solid 1px colors(gray-3);
+							content:'\E004';
+							display:block;
+						    font-family:'bcsicons';
+							font-size: 12px;
+							line-height: 28px;
+							width:17px;
+							@include prefix("transition", opacity 0.3s ease);
+							
+							@include breakpoint(mobile){
+								background:transparent;
+								background: linear-gradient(to right, rgba(colors(white),0) 0%, rgba(colors(white),1) 100%);
+								border:none;
+								content:"";
+								height:30px;
+							}
+						}
+					}
+					
+					&-container {
+						overflow:scroll; 
+						overflow-y: hidden; 
+						overflow-x: scroll;
+						@include prefix("overflow-scrolling",touch);
+					}
+					
+					&-overflow {
+						white-space: nowrap;
+					}
+					
+					&-blocks {
+						border:solid 1px colors(gray-3);
+						@include inline-block;
+						height:30px;
+						line-height:30px;
+						padding:0 5px;
+						margin:2px;
+						text-align:center;
+						min-width:30px;
+						max-width:90px;
+						@include prefix("transition", border 0.3s ease);
+						@include prefix("box-sizing",border-box);
+						
+						&:hover {
+							border:solid 1px colors(black);	
+						}
+						
+						&.selected {
+							border:solid 1px colors(black);
+						}
+						
+						&.number {
+							min-width:40px;
+						}
+					}
+				}
+				
+				&-info {
+					&-rating {
+						display:none;
+					}
+				}
+			
+				&-swatches {
+					opacity:0;
+					position:relative;
+					top:-5px;
+					@include prefix("transition", opacity 0.3s ease 0.2s);
+					
+					&-swatch {
+						background:colors(black);
+						@include inline-block;
+						margin:0 2px;
+						height:16px;
+						width:16px;
+						@include prefix("border-radius", 16px);
+						
+						&.beige { background:colorFamily(beige); }
+						&.black { background:colorFamily(black); }
+						&.blue { background:colorFamily(blue); }
+						&.brown { background:colorFamily(brown); }
+						&.gray { background:colorFamily(gray); }
+						&.green { background:colorFamily(green); }
+						&.orange { background:colorFamily(orange); }
+						&.pink { background:colorFamily(pink); }
+						&.purple { background:colorFamily(purple); }
+						&.red { background:colorFamily(red); }
+						&.white { background:colorFamily(white);border:solid 1px colors(gray-4);width:15px;height:15px; }
+						&.yellow { background:colorFamily(yellow); }
+					}
+				}
+			}
+		}
+		
+		&-title {
+			padding:10px 0;
+			text-align:center;
+		}
+	}
+	
+	&-images {
+		cursor:pointer;
+		margin:0 10px;
+		position:relative;
+		@include aspect-ratio(3,4);
+		@include prefix("box-sizing",border-box);
+		
+		img {
+			position:absolute;
+			top:0px;
+			@include prefix("transition", opacity 0.3s ease);
+		}
+	}
+
+
+}
