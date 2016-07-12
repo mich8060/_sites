@@ -90,10 +90,14 @@
 			if($s->attr['custom']){
 				$options = null;
 				$option = $s->find('option');
+				$classes = "select";
 				foreach($option as $o){
 					$options .= $template->options($o);
 				}
-				$selector = '<div class="select" tabindex="0"><div class="select-value">'.$s->find('option',0)->innertext.'</div><div class="select-options">'.$options.'</div></div>';
+				if($s->attr['pretext']){
+					$classes .= " pretext";
+				}	
+				$selector = '<div class="'.$classes.'" tabindex="0"><div class="select-value">'.$s->find('option',0)->innertext.'</div><div class="select-options">'.$options.'</div></div>';
                 $s->outertext = $selector;
 			}
 		}

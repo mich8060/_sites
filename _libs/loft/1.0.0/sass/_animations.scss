@@ -16,6 +16,22 @@
  	}
 }
 
+@keyframes loading {
+  	0% { 
+    	background:colors(gray-3);
+		@include prefix("transform",scale(0.5));
+  	}
+  	50% { 
+    	background:colors(white);
+		@include prefix("transform",scale(1));
+  	}
+  	100% { 
+    	transform:scale(0.5);
+    	background:colors(gray-3);
+		@include prefix("transform",scale(0.5));
+  	}
+}
+
 @keyframes dash {
  	0% {
   		stroke-dasharray: 1,200;

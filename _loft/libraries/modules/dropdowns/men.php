@@ -9,23 +9,33 @@
 			</div>
 			<div class="col-lg-11">
 				<div class="row">
-					<div class="col-lg-4">
-						<a href="#"><img src="https://huckberry.imgix.net/store/brand_metadata/000/000/518/heros/original/omega_hero_03.jpg?fit=clip&h=423&w=580" alt="" />Omega</a>
+					<div class="col-lg-6">
+						<a href="collection_mens" class="mini-collection">
+							<div class="mini-collection-image"><img src="img/home/unitedbyblue-hr.jpg" alt="" /></div>
+							<div class="mini-collection-discount">20% off</div>
+							<div class="mini-collection-title">Responsibly-made summer essentials</div>
+						</a>
 					</div>
-					<div class="col-lg-4">
-						<a href="#"><img src="https://huckberry.imgix.net/store/brand_metadata/000/000/727/heros/original/Barebones_hero_02.jpg?fit=clip&h=416&w=570" alt="" />Barebones</a>
+					<div class="col-lg-6">
+						<a href="#" class="mini-collection">
+							<div class="mini-collection-image"><img src="img/home/omega_hero_03.jpg" alt="" /></div>
+							<div class="mini-collection-discount">Up to 50% off</div>
+							<div class="mini-collection-title">Swiss-made icons of style and utility</div>
+						</a>
 					</div>
-					<div class="col-lg-4">
-						<a href="#"><img src="https://huckberry.imgix.net/store/shop_metadata/000/000/006/heros/original/HaliosHero.jpg?fit=clip&h=416&w=570" alt="" />Halios</a>
+					<div class="col-lg-6">
+						<a href="#" class="mini-collection">
+							<div class="mini-collection-image"><img src="img/home/apolis-springhero.jpg" alt="" /></div>
+							<div class="mini-collection-discount">Free Shipping</div>
+							<div class="mini-collection-title">Classic, sustainably produced menswear for the global citizen</div>
+						</a>
 					</div>
-					<div class="col-lg-4">
-						<a href="#"><img src="https://huckberry.imgix.net/store/brand_metadata/000/000/091/heros/original/MOSHero.jpg?fit=clip&h=416&w=570" alt="" />MOS</a>
-					</div>
-					<div class="col-lg-4">
-						<a href="#"><img src="https://huckberry.imgix.net/store/brand_metadata/000/000/241/heros/original/Forsake_hero_02.jpg?fit=clip&h=416&w=570" alt="" />Forsake</a>
-					</div>
-					<div class="col-lg-4">
-						<a href="#"><img src="https://huckberry.imgix.net/store/brand_metadata/000/000/475/heros/original/NEOHero2.jpg?fit=clip&h=416&w=570" alt="" />NEO</a>
+					<div class="col-lg-6">
+						<a href="#" class="mini-collection">
+							<div class="mini-collection-image"><img src="img/home/filson-evergreen_hero.jpg" alt="" /></div>
+							<div class="mini-collection-discount">Over 35% off</div>
+							<div class="mini-collection-title">Classic, US-made bags from an American legend</div>
+						</a>
 					</div>
 				</div>
 			</div>

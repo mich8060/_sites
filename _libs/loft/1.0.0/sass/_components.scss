@@ -263,7 +263,13 @@
 	&.lg {
 		height:45px;
 		line-height:45px;
-		padding:0 40px;
+		padding:0 30px;
+	}
+	
+	&.black {
+		background:colors(black);
+		border:solid 1px colors(black);
+		color:colors(white);
 	}
 	
 	&.block {
@@ -618,6 +624,9 @@ hr, .line {
 	&[type="search"]:before{content:'\0041';}
 	&[type="cart"]:before{content:'\0042';}
 	&[type="menu"]:before{content:'\0043';}
+	&[type="clock"]:before{content:'\0044';}
+	&[type="chevron-right"]:before{content:'\0045';}
+	&[type="chevron-left"]:before{content:'\0046';}
 	
 }
 
@@ -754,8 +763,9 @@ input[type="radio"] {
 	}
 	
 	&[rating="0"]{
-		opacity:0;
-		visibility:hidden;
+		&:before {
+			width:0%;
+		}
 	}
 	
 	&.md {
@@ -910,6 +920,22 @@ select {
 			
 			&:hover {
 				background:colors(gray-4);
+			}
+		}
+	}
+	
+	
+	&.pretext {
+		&:before {
+			content:"Sort By:";
+			display:block;
+			float:left;
+			margin-right:5px;
+		};
+		
+		.select {
+			&-options {
+				left:52px;
 			}
 		}
 	}

@@ -1,4 +1,62 @@
 /* A - Components */
+.about {
+	background:colors(gray-5) url(https://huckberry.imgix.net/store/brand_metadata/000/000/541/featureds/original/ts_telegraph_featured2.jpg);
+	background-size:cover;
+	overflow:hidden;
+	@include aspect-ratio(7,1);
+	
+	@include breakpoint(mobile){
+		@include aspect-ratio(7,4);
+	}
+	
+	&:after {
+		background:rgba(colors(black),0.1);
+		content:"";
+		display:block;
+		position:absolute;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+	}
+	
+	&-video {
+		position:absolute;
+		top:50%;
+		left:0;
+		right:0;
+		@include prefix("transform", translateY(-50%));
+	}
+	
+	.content-centered {
+		color:colors(white);
+		font-size:24px;
+		font-weight:100;
+		letter-spacing:-0.05em;
+		text-align:center;
+		z-index:9999999;
+		
+		@include breakpoint(mobile){
+			font-size:18px;
+			width:85%;
+		}
+		
+		h1 {
+			font-size:48px;
+			font-weight:700;
+			line-height:48px;
+			letter-spacing:-0.05em;
+			margin-top: -10px;
+		    margin-bottom: 5px;
+		
+			@include breakpoint(mobile){
+				font-size:36px;
+				line-height:32px;
+			}
+		}
+		
+	}
+}
 
 .breadcrumb {
 	list-style-type:none;
@@ -94,16 +152,28 @@
 	}
 	
 	h2 {
+		color:colors(gray-1);
 		font-family:'ChronicleDisplay';
 		font-weight:700;
 	}
 	
-	&-price {
+	&-pricing {
+		font-family:'ChronicleDisplay';
+		color:colors(gold);
 		font-size:36px;
+		font-weight:500;
+		letter-spacing:-0.05em;
 	}
 	
-	h5 {
-		color:colors(gray-1);
+	&-reg {
+		color:colors(gray-2);
+		font-size:18px;
+		text-decoration: line-through;
+		letter-spacing:0;
+	}
+	
+	h3 {
+		color:colors(black);
 		font-family:'ChronicleDisplay';
 		font-weight:500;
 	}
@@ -114,7 +184,13 @@
 		width:100px;
 	}
 	
-
+	.select {
+		height:35px;
+		line-height:35px;
+		text-align:left;
+		width:80%;
+		margin:0 auto 10px;
+	}
 	
 	&-options {
 		padding:10px 0;
@@ -935,8 +1011,8 @@
 	p {
 		color:colors(gray-2);
 		font-family:'ChronicleDisplay';
-		font-size:13px;
-		letter-spacing:-0.05em;
+		font-size:14px;
+		letter-spacing:-0.01em;
 		margin:10px auto;
 		max-width:500px;
 		
@@ -949,6 +1025,20 @@
 			margin:25px auto 30px;
 			max-width:700px;
 		}
+	}
+	
+	.icons {
+		&:before {
+			font-size:12px;
+			margin-right: 5px;
+		    position: relative;
+		    top: 2px;
+		}
+	}
+	
+	&-time {
+		font-size:12px;
+		font-weight:500;
 	}
 	
 	&-subhead {
@@ -969,6 +1059,51 @@
 		font-weight:700;
 		letter-spacing:0.3em;
 		text-transform:uppercase;
+	}
+}
+
+.linkfarm {
+	font-size:14px;
+	
+	@include breakpoint(mobile){
+		margin-left:-20px;
+		margin-right:-20px;
+	}
+	
+	a {
+		display:block;
+		padding:2px 0;
+		
+		@include breakpoint(mobile){
+			border-bottom:solid 1px colors(gray-5);
+			display:none;
+			padding:5px 10px;
+		}
+		
+		&:first-of-type {
+			font-weight:700;
+			
+			@include breakpoint(mobile){
+				display:block;
+				position:relative;
+				
+				&:after {
+					content:'\0045';
+					display:block;
+					font-family: 'Loftcons';
+					font-size:10px;
+					position:absolute;
+					right:5px;
+					text-align:center;
+					top:50%;
+					width:20px;
+					height:20px;
+					@include prefix("transform",translateY(-50%) rotate(90deg));
+				}
+			}
+		}
+		
+
 	}
 }
 
@@ -1768,7 +1903,7 @@
 */
 
 .listing {
-	@include aspect-ratio(3,4);
+	@include aspect-ratio(3,4.2);
 	color:colors(black);
 	display:block;
 	float:left;
@@ -1792,7 +1927,7 @@
 	&-details {
 		background:colors(white);
 		border:solid 1px colors(white);
-		padding:10px 0;
+		padding:0 0 10px 0;
 		position:absolute;
 		top:10px;
 		left:10px;
@@ -1825,8 +1960,8 @@
 		@include prefix('box-sizing',border-box);
 		
 		@include breakpoint(mobile){
-			top:15px;
-			@include prefix("transform",scale(0.75));
+			top:5px;
+			@include prefix("transform",scale(0.85));
 		}
 		
 		span {
@@ -1854,9 +1989,10 @@
 	}
 	
 	&-gallery {
+		background:colors(white);
 		list-style-type:none;
 		margin:0 0 10px 0;
-		padding:115% 0 0 0;
+		padding:105% 0 0 0;
 		position:relative;
 		overflow:hidden;
 		
@@ -1912,46 +2048,25 @@
 		text-align:left;
 		
 		&-brand {
+			font-weight:500;
 			overflow: hidden;
 		  	text-overflow: ellipsis;
 			white-space: nowrap;
 		}
 		
-		&-pricing {
-			background:colors(white);
-			border:solid 1px colors(gray-4);
-			height:50px;
-			padding:16px 0;
-			position:absolute;
-			right:17px;
-			text-align:center;
-			text-indent:-4px;
-			top:25px;
-			width:50px;
-			z-index:999999;
-			@include prefix("border-radius",50px);
-			@include prefix("box-sizing", border-box);
-			
-			@include breakpoint(mobile){
-				right:4px;
-				top:15px;
-				@include prefix("transform",scale(0.80));
-			}
-		}
-		
 		&-price {
 			color:colors(gray-2);
 			font-size:12px;
-			line-height:10px;
+			line-height:12px;
 			text-decoration:line-through;
 		}
 		
 		&-sale {
 			color:colors(gold-2);
-			display:block;
-			font-size:16px;
-			font-style:italic;
-			line-height:8px;
+			@include inline-block;
+			font-size:18px;
+			line-height:24px;
+			letter-spacing:-0.025em;
 		}
 		
 		&-title {
@@ -2016,7 +2131,7 @@
 	}
 	
 	@include breakpoint(mobile){
-		@include aspect-ratio(3,5);
+		@include aspect-ratio(3,5.5);
 		width:50%;
 		
 		&-details { top:3px;
@@ -2080,51 +2195,86 @@
 
 	&.double {
 		width:50%;
-		@include aspect-ratio(5,3.33);
+		@include aspect-ratio(5,3.5);
 		
 		@include breakpoint(mobile){
-			margin-bottom: -7px;
+			margin-bottom: -5px;
 			width:100%;
-			@include aspect-ratio(5,3.75);
+			@include aspect-ratio(5,7);
+		}
+		
+		.rating {
+			height:20px;
+			margin-top:5px;
+			width:85px;
+
+			&:before,
+			&:after {
+				font-size:16px;
+				letter-spacing:0.05em;
+			}
 		}
 		
 		.listing {
 			&-details {
 				background:colors(gray-5);
 				padding:0;
-				top:20px;
+				top:10px;
+				
+				@include breakpoint(mobile){
+					top:3px;
+				}
 			}
 			
 			&-discount {
-				top:15px;
+				top:10px;
 			}
 			
 			&-gallery {
-				padding-top:67%;
-				width:52%;
+				margin-bottom:0;
+				padding-top:68%;
+				width:54%;
+				
+				@include breakpoint(mobile){
+					padding-top:80%;
+					width:100%;	
+				}
 				
 				li {
 					width:80%;
+					
+					&.selected {
+						@include prefix("transform", (translate3d(-50%,-50%,0)));	
+						
+						@include breakpoint(mobile){
+							@include prefix("transform", (translate3d(-50%,-60%,0)));	
+						}
+					}
 				}
 				
-				&:before {
-				    top:73px;
-				    right:30px;
-				    bottom:73px;
-				    left:29px;
-				
+
+			}
+			
+
+			
+			&-description {
+				&:after {
+					color:colors(black);
+					content:"Some people claim to care about the environment but they never do anything about it. Luckily, you want to be a part of the change, which starts by wearing the United by Blue Men's Standard Chambray Pocket Crew.";
+					display:block;
+					letter-spacing:0;
+					margin:10px 10px 10px 0;
+					white-space:normal;
+
 					@include breakpoint(mobile){
-						top: 72px;
-						right: 19px;
-						bottom: 23px;
-						left: 19px;	
+						display:none;
 					}
 				}
 			}
 			
 			&-info {
 				bottom:0;
-				padding:40px 10px;
+				padding:60px 10px;
 				position:absolute;
 				right:0;
 				top:0;
@@ -2132,7 +2282,10 @@
 				@include prefix('box-sizing',border-box);
 				
 				@include breakpoint(mobile){
-					padding:86px 10px 0 10px;
+					padding:20px 10px;
+					position:static;
+					text-align:center;
+					width:100%;
 				}
 
 				&-brand {
@@ -2149,13 +2302,22 @@
 						
 						@include breakpoint(mobile){
 							white-space:normal;
-							width:120px;
+							width:100%;
 						}
 					}
 				}
-				
-				&-pricing {
-					top:15px;
+
+		
+				&-price {
+					font-size:14px;
+					line-height:14px;
+				}
+		
+				&-sale {
+					font-size:24px;
+					line-height:24px;
+					letter-spacing:-0.025em;
+					margin-top:5px;
 				}
 				
 				&-title {
@@ -2163,18 +2325,10 @@
 					@include breakpoint(mobile){
 						text-overflow: initial;	
 						white-space:normal;
+						width:100%;
 					}
 					
-					&:after {
-						content:"Some people claim to care about the environment but they never do anything about it. Luckily, you want to be a part of the change, which starts by wearing the United by Blue Men's Standard Chambray Pocket Crew.";
-						display:block;
-						margin:20px 0;
-						white-space:normal;
-						
-						@include breakpoint(mobile){
-							display:none;
-						}
-					}
+
 				}
 			}
 		}
@@ -2379,6 +2533,113 @@
 	width:240px;
 	@include prefix("transform", translateX(-220%));
 	@include prefix("transition", all 0.3s ease);
+}
+
+.lazyload {
+	background:colors(white);
+	overflow:hidden;
+	margin-top:-100px;
+	margin-bottom:-100px;
+	position:relative;
+}
+
+.mini-collection {
+	background:colors(white);
+	display:block;
+	font-size:12px;
+	line-height:12px;
+	margin-bottom:15px;
+	padding:0 0 10px 0;
+
+	&-discount {
+		color:colors(gold);
+		font-weight:500;
+		padding:0 5px;
+		text-transform:uppercase;
+	}
+	
+	&-image {
+		@include aspect-ratio(3,1.5);
+		margin-bottom:5px;
+		overflow:hidden;
+		
+		img {
+			position:absolute;
+			left:0;
+			right:0;
+			top:50%;
+			@include prefix("transform",translateY(-50%));
+		}
+	}
+
+	&-title {
+	  	overflow: hidden;
+		padding:0 5px;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+}
+
+.page-loader {
+	clear:both;
+	overflow:hidden;
+	padding:40px 0;
+	position:relative;
+	text-align:center;
+	@include prefix('box-sizing',border-box);
+	
+	ul {
+		@include inline-block;
+  		font-size:0;
+	    height:15px;
+		list-style: none;
+	  	margin:0;
+	  	padding:0;
+		
+		li {
+			@include inline-block;
+		    height:0;
+		    width:0;
+		    margin:0 1px;
+		    height:10px;
+		    width:10px;
+		    border:3px solid colors(gray-3);
+		    border-radius: 100%;
+		    transform: transformZ(0);
+		    animation: loading 2s infinite;
+		    
+			&:nth-child(1n) {
+		      animation-delay: 0s;
+		    }
+		    &:nth-child(2n) {
+		      animation-delay: 0.2s;
+		    }
+		    &:nth-child(3n) {
+		      animation-delay: 0.4s;
+		    }	
+		}
+	}
+}
+
+.pager {
+	background:colors(gray-4);
+	clear:both;
+	font-size:12px;
+	font-weight:700;
+	padding:20px 0;
+	text-align:center;
+	text-transform:uppercase;
+	@include prefix("box-shadow",inset 0 5px 5px rgba(colors(black),0.05));
+	
+	.icons {
+		&:before {
+			font-size:16px;
+			margin:0 20px;
+			padding:5px;
+			position:relative;
+			top:4px;
+		}
+	}
 }
 
 .placeholder {

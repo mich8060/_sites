@@ -9,23 +9,33 @@
 			</div>
 			<div class="col-lg-11">
 				<div class="row">
-					<div class="col-lg-4">
-						<a href="#"><img src="img/home/dropdown_1.jpg" alt="" />Sunski</a>
+					<div class="col-lg-6">
+						<a href="collection_women" class="mini-collection">
+							<div class="mini-collection-image"><img src="img/home/women_prana.jpg" alt="" /></div>
+							<div class="mini-collection-discount">Up to 70% off</div>
+							<div class="mini-collection-title">New Arrivals from Prana</div>
+						</a>
 					</div>
-					<div class="col-lg-4">
-						<a href="#"><img src="img/home/dropdown_2.jpg" alt="" />Natural</a>
+					<div class="col-lg-6">
+						<a href="collection_women" class="mini-collection">
+							<div class="mini-collection-image"><img src="img/home/dropdown_2.jpg" alt="" /></div>
+							<div class="mini-collection-discount">Up to 70% off</div>
+							<div class="mini-collection-title">New Arrivals from Prana</div>
+						</a>
 					</div>
-					<div class="col-lg-4">
-						<a href="#"><img src="img/home/dropdown_3.jpg" alt="" />Kanken</a>
+					<div class="col-lg-6">
+						<a href="collection_women" class="mini-collection">
+							<div class="mini-collection-image"><img src="img/home/dropdown_3.jpg" alt="" /></div>
+							<div class="mini-collection-discount">Up to 70% off</div>
+							<div class="mini-collection-title">New Arrivals from Prana</div>
+						</a>
 					</div>
-					<div class="col-lg-4">
-						<a href="#"><img src="img/home/dropdown_4.jpg" alt="" />Campfire</a>
-					</div>
-					<div class="col-lg-4">
-						<a href="#"><img src="img/home/dropdown_5.jpg" alt="" />Montara</a>
-					</div>
-					<div class="col-lg-4">
-						<a href="#"><img src="img/home/dropdown_6.jpg" alt="" />Falcon</a>
+					<div class="col-lg-6">
+						<a href="collection_women" class="mini-collection">
+							<div class="mini-collection-image"><img src="img/home/dropdown_4.jpg" alt="" /></div>
+							<div class="mini-collection-discount">Up to 70% off</div>
+							<div class="mini-collection-title">New Arrivals from Prana</div>
+						</a>
 					</div>
 				</div>
 			</div>

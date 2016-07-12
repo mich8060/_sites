@@ -7,13 +7,14 @@
         </ul>
 		<div class="listing-swatches">{swatches}</div>
         <div class="listing-info">
-        	<div class="listing-info-pricing">
+            <div class="listing-info-brand">{brand}</div>
+            <div class="listing-info-title">{title}</div>
+			<div class="listing-info-pricing">
         		<span class="listing-info-sale">{salePrice}</span>
 				<span class="listing-info-price">{listPrice}</span>
         	</div>
-            <div class="listing-info-brand">{brand}</div>
-            <div class="listing-info-title">{title}</div>
-
+			<div class="rating" rating="{reviews}"></div>
+			<div class="listing-description"></div>
 			<div class="listing-options">
 				<div class="listing-options-arrows"></div>
 				<div class="listing-options-arrows"></div>

@@ -14,6 +14,10 @@
 					<div class="steal">
 						<div class="steal-brand">Patagonia</div>
 						<div class="steal-title">Nano-Air Insulated Jacket - Men's</div>
+						<div class="steal-pricing">
+							<span class="steal-pricing-sale">$125</span>
+							<span class="steal-pricing-reg">$199</span>
+						</div>
 					</div>
 				</a>
 			</steal>
@@ -37,6 +41,8 @@
 	</div>
 	<nav>
 	    <ul>
+			<li><a href="#" class="primary">New Arrivals</a></li>
+			<li><a href="#" class="primary">Brands</a></li>
 	        <li>
 				<a href="#" class="primary">Women</a>
 	            <dropdown template="women"></dropdown>
@@ -58,7 +64,7 @@
 	            <dropdown template="activities"></dropdown>
 			</li>
 	      	<li>
-				<a href="#" class="primary">Events</a>
+				<a href="#" class="primary">Collections</a>
 	            <dropdown template="collections"></dropdown>
 			</li>
 	    </ul>

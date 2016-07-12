@@ -3,7 +3,7 @@ body {
 	background:colors(gray-5);
 	
 	@include breakpoint(mobile) {
-		padding-top:90px;
+		padding-top:87px;
 	}
 	
 	&.menu-open {
@@ -257,141 +257,11 @@ events {
 }
 
 footer {
-	background:colors(gray-4);
-	color:colors(black);
+	background:colors(gray-5);
 	clear:both;
+	min-height:400px;
 	position:relative;
 	
-	.footer {		
-		&-app {
-			padding:50px 0;
-			
-			@include breakpoint(mobile){
-				margin:0 auto;
-				padding:20px 0;
-				width:240px;
-			}
-			
-			a {
-				border:none;
-				padding:0;
-			}
-			
-			img {
-				background:colors(white);
-				border:solid 1px colors(gray-4);
-				float:left;
-				line-height:14px;
-				margin:-10px 10px 0 0;
-				padding:5px;
-				width:50px;
-				
-				@include prefix("border-radius", 12px);
-			}
-		}
-		&-cap {
-			background:colors(white);
-			border-top:solid 2px colors(white);
-			color:colors(gray-3);
-			font-size:14px;
-			line-height:16px;
-			padding:10px;
-			text-align:center;
-			
-			@include breakpoint(mobile){
-				span {
-					display:block;
-				}
-			}
-			
-			a {
-				padding:0 5px;
-				border:none;
-				@include inline-block;
-			}
-		}
-		&-pillars {
-			background:colors(gray-4);
-			border-bottom:solid 2px colors(white);
-			border-top:solid 2px colors(white);
-			padding:40px 0;
-			
-			.col-lg-4 {
-				&:last-child {
-					a {
-						border-right:none;
-					}
-				}
-			}
-			
-			a {
-				border:none;
-				border-right:solid 1px colors(gray-4);
-				text-align:center;
-				
-
-
-				&:hover {
-					color:colors(black);
-				}
-			}
-		}
-		&-social {
-			padding:0 15px;
-			
-			@include breakpoint(mobile){
-				padding:15px;
-				text-align:center;
-			}
-			
-			a {
-				border:none;
-				color:colors(black);
-				@include inline-block;
-				margin-right:5px;
-				padding:0 5px;
-				@include prefix("border-radius", 2px);
-			}
-		}
-	}
-	
-	strong {
-		display:block;
-		padding:0 0 10px 0;
-		
-		@include breakpoint(mobile){
-			border-bottom:solid 1px colors(white);
-			font-weight:normal;
-			padding:10px 20px;
-			position:relative;
-			
-			&:after {
-				content:"\E002";
-				display:block;
-			    font-family:'bcsicons';
-				position:absolute;
-				right:15px;
-				top:22%;
-			}
-			
-			& + .accordion {
-				display:none;
-			}
-		}
-	}
-	
-	
-	a {
-		color:colors(gray-1);
-		display:block;
-		padding:5px 0;
-		
-		@include breakpoint(mobile){
-			border-bottom:solid 1px colors(white);
-			color:colors(black);
-			padding:10px 20px;
-		}
-	}
 }
 
 header {
@@ -679,6 +549,8 @@ steal {
 	
 	.steal {
 		overflow:hidden;
+		position:relative;
+		top:-9px;
 		
 		a {
 			display:block;
@@ -698,6 +570,20 @@ steal {
 		
 		&-title {
 			font-weight:400;
+		}
+		
+		&-pricing {
+			padding-top:1px;
+			
+			&-sale {
+				color:colors(gold);
+			}
+			
+			&-reg {
+				color:colors(gray-2);
+				font-size:10px;
+				text-decoration: line-through;
+			}
 		}
 	}
 	
