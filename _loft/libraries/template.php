@@ -128,7 +128,7 @@ class Template {
 		$term = urlencode($item->attr['term']);
 		$limit = $item->attr['limit'];
 		$offset = ($item->attr['offset'] != "") ? $item->attr['offset'] : 0;
-		$json = $this->service("http://api.backcountry.com/mobile/products/search/".$term."?limit=".$limit."&offset=".$offset);
+		$json = $this->service("http://api.backcountry.com/mobile/products/search/".$term."?limit=".$limit."&offset=".$offset."&site=steepcheap");
 		$product = "";
 		foreach($json->products as $j){
 			$data = array(
@@ -139,9 +139,9 @@ class Template {
                 "title"         => $j->title,
                 "image"         => $j->thumbnail,
                 "reviews"       => $j->customerReviews->average,
-                "listPrice"     => '$'.$j->lowestListPrice,
-                "salePrice"     => '$'.$j->lowestSalePrice,
-                "discount"      => $j->percentOff.'% off',
+                "listPrice"     => '$'.round($j->lowestListPrice),
+                "salePrice"     => '$'.round($j->lowestSalePrice),
+                "discount"      => $j->percentOff,
                 "exclusives"    => '',
             );
 			$data['image'] = str_replace("/medium/","/900/",$data['image']);

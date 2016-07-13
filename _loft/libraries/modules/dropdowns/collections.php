@@ -2,32 +2,32 @@
     <div class="container-lg">
         <div class="row">
             <div class="col-lg-3">
-                <a href="#">
-                    <img src="img/navigation/32450_SF2.jpg" alt="" />
-                    <div class="collections-headline">Maximum Style &amp; Warmth</div>
-                    <div class="collections-subheadline">Canada Goose, Parajumpers, G-Lab, &amp; More</div>
-                </a>
+				<a href="collection_womens" class="mini-collection">
+					<div class="mini-collection-image"><img src="img/home/women_prana.jpg" alt="" /></div>
+					<div class="mini-collection-discount">Up to 70% off</div>
+					<div class="mini-collection-title">New Arrivals from Prana</div>
+				</a>
             </div>
             <div class="col-lg-3">
-                <a href="#">
-                    <img src="img/navigation/32599_SF2.jpg" alt="" />
-                    <div class="collections-headline">Marmot Down Jackets</div>
-                    <div class="collections-subheadline">Warmth for City, Trail, &amp; Slopes</div>
-                </a>
+				<a href="collection_mens" class="mini-collection">
+					<div class="mini-collection-image"><img src="img/home/unitedbyblue-hr.jpg" alt="" /></div>
+					<div class="mini-collection-discount">20% off</div>
+					<div class="mini-collection-title">Responsibly-made summer essentials</div>
+				</a>
             </div>
             <div class="col-lg-3">
-                <a href="#">
-                    <img src="img/navigation/31994_SF2.jpg" alt="" />
-                    <div class="collections-headline">Hunter Boots &amp; Apparel</div>
-                    <div class="collections-subheadline">Iconic Style &amp; Enduring Function</div>
-                </a>
+				<a href="#" class="mini-collection">
+					<div class="mini-collection-image"><img src="img/home/omega_hero_03.jpg" alt="" /></div>
+					<div class="mini-collection-discount">Up to 50% off</div>
+					<div class="mini-collection-title">Swiss-made icons of style and utility</div>
+				</a>
             </div>
             <div class="col-lg-3">
-                <a href="#">
-                    <img src="img/navigation/30438_SF2.jpg" alt="" />
-                    <div class="collections-headline">Our Most Versatile Insulated Jackets</div>
-                    <div class="collections-subheadline">Down for Whatever</div>
-                </a>
+				<a href="#" class="mini-collection">
+					<div class="mini-collection-image"><img src="img/home/apolis-springhero.jpg" alt="" /></div>
+					<div class="mini-collection-discount">Free Shipping</div>
+					<div class="mini-collection-title">Classic, sustainably produced menswear for the global citizen</div>
+				</a>
             </div>
         </div>
     </div>

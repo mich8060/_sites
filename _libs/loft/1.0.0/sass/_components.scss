@@ -392,11 +392,21 @@
 		pointer-events: none;
 	}
 	
-	.bcsicons {
-		position: relative;
-	    top: 2px;
-	    left: -7px;
+	&.icons {
+		padding-left:37px;
 	}
+	
+	&:before {
+		height:17px;
+		font-size:17px !important;
+		left:10px;
+		position:absolute;
+		top:50%;
+		width:17px;
+		@include prefix("transform",translateY(-50%));
+	}
+	
+
 }
 
 button,
@@ -627,6 +637,7 @@ hr, .line {
 	&[type="clock"]:before{content:'\0044';}
 	&[type="chevron-right"]:before{content:'\0045';}
 	&[type="chevron-left"]:before{content:'\0046';}
+	&[type="filter"]:before{content:'\0047';}
 	
 }
 
@@ -870,6 +881,7 @@ select {
 	outline:none;
 	padding:0 10px;
 	position:relative;
+	text-align:left;
 	text-overflow: ellipsis;
   	white-space: nowrap;
 	vertical-align: middle;

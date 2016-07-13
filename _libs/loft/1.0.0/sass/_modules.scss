@@ -1533,6 +1533,31 @@
 	}
 }
 
+.featured-brands {
+	background:colors(white);
+	color:colors(black);
+	display:block;
+	overflow:hidden;
+	padding:0;
+	text-align:left;
+	
+	&-image {
+		float:left;
+		margin:0 15px 0 0;
+		width:100px;
+	}
+	
+	&-title {
+		font-size:12px;
+		font-weight:700;
+		margin-top:10px;
+		text-transform:uppercase;
+	}
+	
+	&-description {
+		line-height:14px;
+	}
+}
 
 /* PLI */
 
@@ -1944,7 +1969,7 @@
 	
 	&-discount {
 		background:colors(gray-1);
-		top:25px;
+		top:15px;
 		color:colors(white);
 		font-size:14px;
 		font-weight:500;
@@ -2523,16 +2548,29 @@
 	}
 }
 
-.filters {
-	background:colors(white);
-	bottom:10px;
-	opacity:0;
-	position:absolute;
-	left:10px;
-	top:10px;
-	width:240px;
-	@include prefix("transform", translateX(-220%));
-	@include prefix("transition", all 0.3s ease);
+.results {
+	position:relative;
+	
+	&.active {
+
+	}
+	
+	.results-filters {
+		background:colors(gray-5);
+		bottom:10px;
+		opacity:1;
+		padding:20px;
+		position:absolute;
+		left:0;
+		top:10px;
+		width:210px;
+		@include prefix("transition", all 0.3s ease);
+		@include prefix('box-sizing',border-box);
+	}
+
+	.results-products {
+		padding-left:220px;
+	}
 }
 
 .lazyload {
@@ -2668,6 +2706,20 @@
 	Last Edited: April 12, 2016
 	By: Michael Stevens
 */
+
+.toolbar {
+	border-top:solid 1px colors(gray-4);
+	border-bottom:solid 1px colors(gray-4);
+	margin:20px 10px 0 10px;
+	padding:9px 0;
+	position:relative;
+	z-index:999999999;
+	
+	.btn {
+		float:left;
+		margin-right:10px;
+	}
+}
 
 .listing-article {
 	color:colors(black);

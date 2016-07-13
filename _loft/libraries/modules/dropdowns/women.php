@@ -10,7 +10,7 @@
 			<div class="col-lg-11">
 				<div class="row">
 					<div class="col-lg-6">
-						<a href="collection_women" class="mini-collection">
+						<a href="collection_womens" class="mini-collection">
 							<div class="mini-collection-image"><img src="img/home/women_prana.jpg" alt="" /></div>
 							<div class="mini-collection-discount">Up to 70% off</div>
 							<div class="mini-collection-title">New Arrivals from Prana</div>
@@ -43,7 +43,7 @@
         </div>
         <div class="col-lg-2" style="border-left:solid 1px #d1d1d1;padding-left:20px;">
             <strong><a href="#">Clothing</a></strong>
-            <a href="womens">Jackets</a>
+            <a href="listing-womens">Jackets</a>
             <a href="#">Tops</a>
             <a href="#">Pants</a>
             <a href="#">Shorts</a>

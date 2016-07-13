@@ -1,7 +1,50 @@
 <dropdown class="brands">
     <div class="container-md text-center">
         <div class="row">
-            <div class="col-lg-12">Shop Over A Thousand Brands</div>
+            <div class="col-lg-4">
+            	<a href="#" class="featured-brands">
+            		<div class="featured-brands-image"><img src="https://huckberry.imgix.net/store/brand_metadata/000/000/243/heros/original/woolrich_hero.jpg?fit=clip&h=416&w=570" alt="" /></div>
+					<div class="featured-brands-title">Woolrich</div>
+					<div class="featured-brands-description">Two centuries of USA-made warmth</div>
+            	</a>
+            </div>
+            <div class="col-lg-4">
+            	<a href="#" class="featured-brands">
+            		<div class="featured-brands-image"><img src="https://huckberry.imgix.net/store/brand_metadata/000/000/106/heros/original/filson-evergreen_hero.jpg?fit=clip&h=416&w=570" alt="" /></div>
+					<div class="featured-brands-title">Filson</div>
+					<div class="featured-brands-description">Synonymous with American-made quality</div>
+            	</a>
+            </div>
+            <div class="col-lg-4">
+            	<a href="#" class="featured-brands">
+            		<div class="featured-brands-image"><img src="https://huckberry.imgix.net/store/brand_metadata/000/000/243/heros/original/woolrich_hero.jpg?fit=clip&h=416&w=570" alt="" /></div>
+					<div class="featured-brands-title">Woolrich</div>
+					<div class="featured-brands-description">Two centuries of USA-made warmth</div>
+            	</a>
+            </div>
+			<div class="spc-in-20"></div>
+            <div class="col-lg-4">
+            	<a href="#" class="featured-brands">
+            		<div class="featured-brands-image"><img src="https://huckberry.imgix.net/store/brand_metadata/000/000/243/heros/original/woolrich_hero.jpg?fit=clip&h=416&w=570" alt="" /></div>
+					<div class="featured-brands-title">Woolrich</div>
+					<div class="featured-brands-description">Two centuries of USA-made warmth</div>
+            	</a>
+            </div>
+            <div class="col-lg-4">
+            	<a href="#" class="featured-brands">
+            		<div class="featured-brands-image"><img src="https://huckberry.imgix.net/store/brand_metadata/000/000/243/heros/original/woolrich_hero.jpg?fit=clip&h=416&w=570" alt="" /></div>
+					<div class="featured-brands-title">Woolrich</div>
+					<div class="featured-brands-description">Two centuries of USA-made warmth</div>
+            	</a>
+            </div>
+            <div class="col-lg-4">
+            	<a href="#" class="featured-brands">
+            		<div class="featured-brands-image"><img src="https://huckberry.imgix.net/store/brand_metadata/000/000/243/heros/original/woolrich_hero.jpg?fit=clip&h=416&w=570" alt="" /></div>
+					<div class="featured-brands-title">Woolrich</div>
+					<div class="featured-brands-description">Two centuries of USA-made warmth</div>
+            	</a>
+            </div>
+			<div class="spc-in-20"></div>
         </div>
         <div class="row">
             <div class="col-lg-12">

@@ -42,7 +42,10 @@
 	<nav>
 	    <ul>
 			<li><a href="#" class="primary">New Arrivals</a></li>
-			<li><a href="#" class="primary">Brands</a></li>
+			<li>
+				<a href="#" class="primary">Brands</a>
+	            <dropdown template="brands"></dropdown>
+			</li>
 	        <li>
 				<a href="#" class="primary">Women</a>
 	            <dropdown template="women"></dropdown>

@@ -43,7 +43,7 @@
         </div>
         <div class="col-lg-2" style="border-left:solid 1px #d1d1d1;padding-left:20px;">
             <strong><a href="#">Clothing</a></strong>
-            <a href="#">Jackets</a>
+            <a href="listing-mens">Jackets</a>
             <a href="#">Shirts</a>
             <a href="#">Hoodies &amp; Sweaters</a>
             <a href="#">Shirts</a>
