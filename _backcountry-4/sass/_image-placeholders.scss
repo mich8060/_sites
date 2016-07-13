@@ -1,0 +1,33 @@
+.image {
+  background: colors(gray-1) url(../img/situational-shot-close.png) top center no-repeat;
+  background-size: cover;
+  
+}
+
+.image-2 {
+  background: colors(gray-1) url(../img/situational-shot-2.png) center center no-repeat;
+  background-size: cover;
+  
+}
+
+.product-image {
+  background: #fff url(../img/product-shot.png) center center no-repeat;
+  background-size: contain;
+  border: 10px solid #fff;
+}
+
+.product-image-gradient {
+  background: colors(gray-1) url(../img/product-shot-gradient.png) center center no-repeat;
+  background-size: cover;
+}
+
+.product-detail-image {
+  background: colors(gray-1) url(../img/product-detail-shot-1.png) center center no-repeat;
+  background-size: cover;
+}
+
+.product-detail-image-2 {
+  background: colors(gray-1) url(../img/product-detail-shot-2.png) center center no-repeat;
+  background-size: cover;
+}
+

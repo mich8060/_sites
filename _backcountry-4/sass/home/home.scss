@@ -1,0 +1,303 @@
+.btn {
+  border-radius:0;  
+}
+
+.container {
+  max-width:1400px !important;
+}
+
+.home-promo {
+  background-size:cover;
+  background-position:center center;
+  background-repeat:no-repeat;
+  background-color:colors(gray-5);
+  height:200px;
+  margin:40px 0;
+  padding:20px;
+  width:100%;
+  
+  .border {
+    border:2px solid colors(gray-3);
+    display:block;
+    height:100%;
+    text-align:center;
+    
+    h2, h4, a {
+      color:colors(gray-1);
+      margin:0;
+    }
+    
+    h2 {
+      font-size:48px;
+      font-weight:weight(light);
+      text-transform:uppercase;
+    }
+    
+    h4 {
+      font-size:22px;
+      font-weight:weight(light);
+      margin-top:20px;
+    }    
+    
+    a {
+      display:block;
+      margin-top:20px;
+    }
+  }
+}
+
+#center-top {
+  width:100%;
+}
+
+#softgoods, #hardgoods {
+  width:100%;
+  height:680px;
+  position:relative;
+  
+  .heading-dual {
+    position:absolute;
+    text-align:center;
+    top:10%;
+    width:100%;
+    z-index:9999;
+    
+    h1, h4 {
+      color:white;
+      font-weight:200;
+    }
+    
+    h1 {
+      text-transform:uppercase;
+    }
+  }
+}
+
+.feature {
+  background:transparent;
+  cursor:pointer;
+  display:inline-block;
+  float:left;
+  height:100%;
+  position:relative;
+  text-align:center;
+  width:50%;
+  
+  h4 {
+    display:none;
+    font-size:32px;
+    font-weight:200;
+    margin-top:80px;
+    position:relative;
+    z-index:9999;
+    
+    &.white {
+      color:white;
+    }
+  }
+  
+  &:before {
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
+    content:'';
+    height:100%;
+    left:0;
+    opacity:1;
+    position:absolute;
+    transition:all .3s;
+    top:0;
+    width:100%;
+    z-index:0;
+  }
+  
+  &.women:before {
+    background-image:url('../img/home/ChelseaNickMtHood-9-sq.jpg');
+  }
+
+  &.men:before {
+    background-image:url('../img/home/men-aframe-sq2.jpg');
+  }
+  
+  &.backstory:before {
+    background-image:url('../img/home/united-by-blue.jpg');
+  }
+  
+  &.fitness:before {
+    background-image:url('../img/home/fitness.jpg');
+  }
+  
+  &.ski:before {
+    background-image:url('../img/home/ski.jpg');
+  }
+  
+  &.snowboard:before {
+    background-image:url('../img/home/snowboard.jpg');
+  }
+  
+  &.full {
+    width:100%;
+  }
+  
+  .cta {
+    bottom:45%;
+    left:0;
+    position:absolute;
+    width:100%;
+    
+    .btn {
+      background:transparent;
+      margin-right:0;
+      position:relative;
+      top:0;
+      
+      &.white {
+        border:1px solid white;
+        color:white;
+      }
+      
+      &.vis-nav {
+        border:0 !important;
+        font-size:28px;
+        text-transform:uppercase;
+      }
+    }
+    
+    &.top {
+      bottom:80%;
+    }
+    
+    &.bottom {
+      bottom:10%;
+    }
+  }
+  
+  &:hover{
+    
+    .cta .btn {
+      background:colors(black);
+      color:white;
+      
+      &.white {
+        background:white;
+        color:colors(black);
+      }
+      
+      &.vis-nav {
+        background:transparent !important;
+        color:colors(black);
+        position:relative;
+        top:10px;
+        
+        &.white {
+          color:white;
+        }
+      }
+    }
+    
+    &:before {
+      opacity:.8;
+    }
+  }
+}
+
+#backstory {
+  background-position:center center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  width:100%;
+  height:720px;
+  
+  img {
+    margin:200px 0 0 375px;
+    position:relative;
+    width:300px;
+    z-index:9999;
+  }
+  
+  .cta {
+    bottom:175px;
+    right:390px;
+    width:auto;
+  }
+}
+
+#brands {
+  margin:40px 0;
+  text-align:center;
+  
+  h4 {
+    font-size:18px;
+    font-weight:200;
+    margin-bottom:20px;
+  }
+  
+  img {
+    cursor:pointer;
+    margin:0 auto;
+    opacity:.4;
+    transition:opacity .3s;
+    width:75px;
+    
+    &:hover {
+      opacity:1;
+    }
+  }
+  
+  .btn {
+    margin:40px 0 0 0;
+  }
+}
+
+#link-farm {
+  display:block;
+  float:left;
+  margin:40px 0;
+  position:relative;
+  text-align:center;
+  width:100%;
+  
+  h4 {
+    font-size:18px;
+    font-weight:200;
+    margin-bottom:20px;
+  }
+  
+  .offset_b_2 {
+    margin-left:20.666667%;
+  }
+  
+  ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align:left;
+    
+    li {
+      color:colors(gray-1);
+      padding:1px 0;
+      
+      &:first-child {
+        color:colors(black);
+        font-weight:600;
+      }
+    }
+  }
+}
+
+.search {
+  display:block;
+  float:left;
+  margin:30px 0 80px;
+  position:relative;
+  
+  search {
+    left:460px;
+    right:460px;
+    
+    input {
+      border-bottom:1px solid colors(black);
+      border-radius:0;
+    }
+  }
+}

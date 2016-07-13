@@ -1,0 +1,73 @@
+.ratio {
+	background-position:center center;
+	background-repeat:no-repeat;
+	position: relative;
+	width: 100%;
+	
+	.content {
+		position:  absolute;
+		top:0;
+		left:0;
+		bottom:0;
+		right:0;
+	}
+	
+	&:before {
+		content: "";
+		display: block;
+	}
+	
+	&.one {
+		&.regular { 
+			background-size:100% auto;
+			
+			&:before {
+				padding-top: 100%;
+			}
+		}
+		&.long { 
+			background-size:auto 95% !important;
+			&:before { padding-top: 100%; }
+		}
+	}
+	
+	&.two {
+		&.tiny {
+			background-size:90% auto !important;
+			&:before { padding-top: 10%; }
+		}
+		
+		&.short {
+			background-size:90% auto !important;
+			&:before { padding-top: 20%; }
+		}
+		&.regular { 
+			background-size:95% auto;
+			&:before { padding-top: 50%; }
+		}
+		&.long { 
+			background-size:95% auto;
+			&:before { padding-top: 85%; }
+		}
+		&.odd {
+			background-size:80% auto !important;
+			&:before { padding-top: 75%; }
+		}
+	}
+	
+	&.three {
+		&.short {
+			&:before { padding-top: 33.336%; }
+		}
+	}
+	
+	&.five {
+		&.short {
+			&:before { padding-top: 25%; }
+		}
+		
+		&.regular {
+			&:before { padding-top: 40%; }
+		}
+	}
+}

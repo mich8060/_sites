@@ -1,0 +1,232 @@
+.recommendation-slider {
+  margin: 0 auto -30px;
+  overflow-x: scroll;
+  overflow-y: visible;
+  -webkit-overflow-scrolling:touch;
+  padding-bottom: 30px;
+  position: relative;
+  @include prefix("transform", translate3d(0,0,0));
+  width: 100%;
+  
+  .list-wrapper {
+    padding: 0 10px;
+    width: 900%;
+    
+    &.owl-carousel {
+      margin-left: 5% !important;
+      margin-right: 5% !important;
+      width: 90% !important;
+      
+      .listing {
+        width: 100% !important;
+      }
+    }
+  }
+  
+  .owl-buttons {
+    display: block;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    
+    div {
+      color: transparent;
+      padding-top: 57%;
+      left: -5%;
+      position: absolute;
+      top: 0;
+      width: 5%;
+      
+      @media (min-width: $mediumBreakpoint) {
+        padding-top: 40%;
+      };
+      
+      &:after {
+        color: #222222;
+        content: "\E760";
+        cursor: pointer;
+        display: block;
+        font-family: "Entypo";
+        font-size: 32px;
+        height: 32px;
+        left: 0;
+        line-height: 32px;
+        position: absolute;
+        right: 0;
+        top: 46%;
+        text-align: center;
+        @include prefix("transform", (rotate(90deg) translateY(-50%)));
+      };
+      
+      &.owl-next {
+        left: auto;
+        right: -5%;
+        
+        &:after {
+          @include prefix("transform",rotate(-90deg));
+        };
+      }
+    }
+  }
+
+  .owl-item {
+    vertical-align: top;
+  }
+  
+  &.count-4 {
+    .list-wrapper {
+      width: 250%;
+    }
+    
+    .listing {
+      width: 25%;
+    }
+  }
+  
+  &.count-5 {
+    .list-wrapper {
+      width: 312.5%;
+    }
+    
+    .listing {
+      width: 20%;
+    }
+    
+  }
+}
+@media (min-width: 420px) {
+  .recommendation-slider {
+    .list-wrapper {
+      width: 600%;
+    }
+  }
+}
+@media (min-width: $smallBreakpoint) {
+  .recommendation-slider {
+    .list-wrapper {
+      width: 420%;
+    }
+    
+    &.count-4 {
+      .list-wrapper {
+        width: 160%;
+      }
+    }
+    
+    &.count-5 {
+      .list-wrapper {
+        width: 200%;
+      }
+    }
+  }
+}
+@media (min-width: $mediumBreakpoint) {
+  .recommendation-slider {
+    .list-wrapper {
+      width: 330%;
+    }
+    
+    &.count-4 {
+      .list-wrapper {
+        width: 115%;
+      }
+    }
+    
+    &.count-5 {
+      .list-wrapper {
+        width: 143.75%;
+      }
+    }
+  }
+}
+@media (min-width: $largeBreakpoint) {
+  .recommendation-slider {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1400px;
+    overflow: visible;
+    width: 86%;
+    
+    .list-wrapper {
+      width: 100%;
+
+      &.owl-carousel {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100% !important;
+      }
+    }
+    
+    &.count-4,
+    &.count-5 {
+      .list-wrapper {
+        width: 100%;
+      }
+    }
+    
+    &.count-5 {
+      width: 100%;
+    }
+    
+    .listing {
+      /*margin: 0;
+            opacity: .2;
+            width: 100% !important;
+            
+            @include prefix("transition", opacity .5s);
+            
+            .item-img {
+              margin: 0 2%;
+              width: 96%;
+            }*/
+    }
+    
+    .owl-buttons {
+      .owl-prev,
+      .owl-prev:hover,
+      .owl-next,
+      .owl-next:hover {
+        bottom: 21px;
+        width: 57%;
+      }
+      
+      .owl-prev {
+        background-position: 90%;
+        left: -57.2%;
+      }
+    
+      .owl-next {
+        background-position: 10%;
+        right: -57.2%;
+      }
+    }
+    
+    .owl-carousel:hover {
+      .owl-buttons {
+        .owl-prev,
+        .owl-prev:hover {
+          width: 57%;
+          background-position: 95%;
+        }
+        
+        .owl-next,
+        .owl-next:hover {
+          width: 57%;
+          background-position: 5%;
+        }
+      }
+    }
+    
+    .owl-prev:hover,
+    .owl-next:hover {
+      
+    }
+  }
+  
+  .owl-item.active {
+    .just-in-item {
+      opacity: 1;
+    }
+  }
+}

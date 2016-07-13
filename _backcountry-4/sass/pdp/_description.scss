@@ -1,0 +1,135 @@
+#description {
+  margin:20px 0 20px 0;
+}
+
+.details {
+  
+  h2 {
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 20px;
+    margin: 20px 0;
+    
+    @media (min-width: $smallBreakpoint) {
+      font-size: 24px;
+      margin-bottom: 30px;
+    };
+  }
+  
+  ul {
+    padding-left:15px;
+  }
+}
+
+.long-form {
+  display: none;
+  padding-bottom: 50px;
+  padding-top: 20px;
+  
+  h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    
+    @media (min-width: $smallBreakpoint) {
+      margin-bottom: 30px;
+    };
+  }
+}
+
+@media (min-width: 900px) {
+  .long-form {
+    display: block;
+  }
+}
+
+.long-form-tab-content-wrapper {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.long-form-description {
+  margin-bottom: 50px;
+}
+
+.long-form-specs {
+  margin-bottom: 50px;
+  
+  .label {
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .content {
+    /*border-left: 1px solid colors(gray-4);*/
+    float: left;
+    margin: 0;
+    padding: 0 15px;
+    width: 50%;
+    
+    &.first {
+      padding-left: 0;
+    };
+    
+    &.last {
+      padding-right: 0;
+    }
+  }
+  
+  .tech-specs {
+    border: 0px;
+  }
+  
+  .tr {
+    border-bottom: 1px solid colors(gray-4);
+  }
+}
+
+.long-form-tab-content-wrapper.columns {
+  .long-form-description,
+  .long-form-specs {
+    h2 {
+      font-size: 18px;
+      line-height: 20px;
+    }
+  }
+  
+  @media (min-width: $smallBreakpoint) {
+    .long-form-description,
+    .long-form-specs {
+      h2 {
+        font-size: 24px;
+        line-height: 30px;
+      }
+    }
+  }
+  
+  @media (min-width: $largeBreakpoint) {
+    max-width: 1200px;
+  
+    .long-form-description,
+    .long-form-specs {
+      float: left;
+    
+      h2 {
+        text-align: left;
+      }
+    }
+  
+    .long-form-description {
+      padding-left: 20px;
+      padding-right: 50px;
+      width: 60%;
+    }
+  
+    .long-form-specs {
+      padding-right: 10px;
+      width: 40%;
+    
+      .content {
+        width: 100%;
+      }
+    }
+  };
+}
+

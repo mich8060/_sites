@@ -1,0 +1,56 @@
+@import 'functions';
+
+$settings: (
+	url:		"http://localhost:8888/bc-redesign/",
+	segment: 	4,
+	rhythm: 	24,
+	round: 		true,
+	unit: 		px
+);
+
+
+$fonts: (
+	primary:	("Conduit",Helvetica, Arial, Sans-Serif)
+);
+
+$colors: (
+	white:	#FFFFFF,
+	black:	#222222,
+	blue:	#3399CC,
+	red:	#B11623,
+	orange: #e48325,
+	green: 	#99cc33,
+	gray-1:	#666666,
+	gray-2: #999999,
+	gray-3: #c2c2c2,
+	gray-4: #efefef,
+	gray-5: #f4f4f4,
+	gray-6: darken(#f7f8f9, 2%),
+	transparent-black-3: rgba(34,34,34,.3),
+	transparent-black-6: rgba(34,34,34,.6),
+  	transparent-black-8: rgba(34,34,34,.8)
+);
+
+
+$weight: (
+	light: 200,
+	regular: 400,
+	bold:700,
+	extrabold: 800,
+	black:900
+);
+
+$colorFamily: (
+	beige:	#efb780,
+	black:	#000,
+	blue: 	#369,
+	brown:	#963,
+	gray:	#ccc,
+	green:	#093,
+	orange:	#f93,
+	pink:	#f39,
+	purple:	#639,
+	red:	#f00,
+	white:	#fff,
+	yellow:	#ff0
+);

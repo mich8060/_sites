@@ -1,0 +1,50 @@
+.btn {
+  background-color:colors(black);
+}
+
+p.mouse {
+  font-size:14px;
+  color:colors(gray-2);
+  margin:0 0 5px;
+}
+
+.exclusive-flag {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  
+  /*@include prefix("transition", (opacity .15s .35s, margin .5s));*/
+}
+
+.big-image .exclusive-flag {
+  text-align: center;
+}
+
+.pdp-utility {
+  .exclusive-flag {
+    display: none;
+  }
+  
+  .breadcrumb {
+    display: none;
+    text-align: center;
+    
+    &:before {
+      content: "\E761";
+      font-family: "Entypo";
+      font-size: 24px;
+      line-height: 1px;
+      position: relative;
+      top: 2px;
+    };
+    
+    @media (min-width: $smallBreakpoint) {
+      display: block;
+      padding-left: 5px;
+      text-align: left;
+    };
+    
+    @media (min-width: $largeBreakpoint) {
+      padding-left: 24px;
+    };
+  }
+}

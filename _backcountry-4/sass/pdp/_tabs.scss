@@ -1,0 +1,18 @@
+.long-form-tabs {
+  margin: 0 auto 30px;
+  text-align: center;
+  
+  div {
+    border-bottom: 1px solid transparent;
+    color: colors(gray-2);
+    display: inline-block;
+    padding: 8px 14px;
+    
+    @include prefix("transition", all .35s);
+    
+    &.active {
+      border-color: colors(black);
+      color: colors(black);
+    }
+  }
+}

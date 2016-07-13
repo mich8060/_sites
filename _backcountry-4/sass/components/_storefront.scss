@@ -1,0 +1,482 @@
+.storefront,
+.flexslider .slides li {
+  &:after {
+    background-size: cover;
+    content: " ";
+    height: 300px;
+    left: 0;
+    position: absolute;
+    top: 0;
+  	width: 100%;
+    /*transition: .5s;*/
+  };
+}
+
+.product-headline {
+  position: absolute;
+  color: #fff;
+  opacity: 1;
+  z-index: 999;
+  text-align: left;
+  /*transition: 1s;*/
+}
+
+.storefront {
+  background-size: cover;
+	position: relative;
+	height: 300px;
+	overflow-x: auto;
+	overflow-y: hidden;
+	cursor: pointer;
+	
+	&:after {
+	  height: 100% !important;
+  }
+	
+  .product-headline {
+    background-color: colors(transparent-black-6);
+    bottom: 0px;
+    left: 0px;
+    padding-bottom: 6px;
+    width: 100%;
+    z-index: 2;
+    @include prefix("transition", .35s);
+
+    .header-2,
+    .header-3 {
+      margin: 10px 5px 0 10px;
+      position: relative;
+      z-index: 2;
+    }
+  
+    .sub-head {
+      margin: 0 10px;
+      position: relative;
+      z-index: 2;
+    }
+  }
+}
+
+.flexslider .slides {
+  li { 
+    background-color: colors(gray-3);
+    @include prefix("transform", 0 0px 0);
+    
+    .photo-credits {
+      background: url(../img/ico-18-camera-white.png) left top no-repeat;
+      color: #fff;
+      opacity: .6;
+      padding-left: 22px;
+      padding-top: 4px;
+      position: absolute;
+      bottom: 15px;
+      right: 10px;
+    }
+    
+    .product-headline,
+    .photo-credits {
+      @include prefix("transform",0 0px 0);
+      transition: .3s;
+    }
+    
+    .product-headline {
+      left: 50px;
+      bottom: 80px;
+      width: 600px;
+
+      .product-headline-intro {
+        margin-bottom: 1px;
+      }
+
+      .btn {
+        margin-right: 7px;
+        margin-top:10px;
+      }
+    }
+  }
+}
+
+
+/* Desktop */
+@media screen and (min-width: $largeBreakpoint) {
+  .storefront,
+  .flexslider .slides li {
+    &:after {
+      height: 450px;
+      opacity: 1;
+    }
+    
+    &:hover {
+      cursor: pointer;
+    };
+    
+    &:hover:after {
+      opacity: 1;
+      transition: 0s;
+    }
+  }
+  
+  .storefront {
+    .product-headline .sub-head {
+        &:after {
+        content: "  ";
+      }
+    }
+    
+    &:hover {
+      .product-headline {
+        background-color: colors(transparent-black-6);
+        transition: .3s;
+        
+        .sub-head {
+          
+          &:after {
+            /*content: " \203A";*/
+            transition: 0;
+          };
+        }
+      }
+    }
+  }
+  
+  .flexslider .slides li.cta-full {
+    &:hover {
+      .btn {
+        background-color: #fff;
+        background-image:url('../img/cta-arrow-right-black@2x.png');
+        color: colors(black);
+      }
+    }
+  }
+  
+  .flex-active-slide .product-headline {
+  	opacity: 0 !important;
+  	transition: .5s;
+  }
+}
+
+/* Cinematic */
+@media screen and (min-width: $xLargeBreakpoint) {
+  .storefront {
+    height: 450px;
+    
+    &:after {
+      height: 450px
+    };
+  }
+}
+
+/* Desktop */
+@media (min-width: $largeBreakpoint) and (max-width: $xLargeBreakpoint - 1) {
+  .storefront {
+    height: 325px;
+    
+    &:after {
+      height: 325px;
+    };
+    
+  }
+}
+
+/* Tablet */
+@media (min-width: $smallBreakpoint) and (max-width: $largeBreakpoint - 1) {
+  .flexslider .slides li {
+    &:after {
+      height: 450px;
+    }
+  }
+  
+  .storefront {
+    height: 275px;
+    
+    &:after {
+      height: 275px;
+    };
+  }
+}
+
+/* Handset */
+@media screen and (max-width: $smallBreakpoint - 1) {
+  .slider-container {
+    height: 310px;
+    margin-top: 0;
+  }
+  
+  .flexslider {
+    height: 300px;
+    
+    .slides {
+      height: 300px;
+      
+      li {
+        height: 300px;
+    
+       .product-headline {
+         background-color: colors(transparent-black-6);
+         bottom: 0;
+         left: 0;
+         padding: 10px 10px 20px;
+         width: 100%;
+         
+         .header-1 {
+           font-family: "Conduit";
+           font-weight: bold;
+           font-size:24px;
+           line-height: 25px;
+         }
+         
+         .large {
+           font-size:15px;
+           line-height: 20px;
+         }
+         
+         .btn {
+           display: none;
+         }
+        }
+      }
+    }
+  }
+  
+  .storefront {
+    height: 300px;
+
+    &:after {
+      background-size: cover;
+    }
+  }
+}
+
+
+@media screen and (max-width: $smallBreakpoint - 1) {
+  .home-v2 {
+    .slider-container,
+    .flexslider,
+    .slides {
+      height: auto;
+    }
+    
+    .flexslider .slides .product-story {
+      margin: 0;
+      
+      .header-2 {
+        margin-bottom: 0 !important;
+      }
+      
+      .large {
+        font-size: 18px;
+      }
+    }
+  
+    .flexslider .slides .product-story:not(.slider-1) {
+      height: 210px;
+      margin: 0 !important;
+      width: 50%;
+      float:left;
+    
+      &.double-wide {
+        margin: 0;
+        width: 100%;
+      }
+    
+      .product-headline {
+        padding: 10px;
+      }
+    }
+    
+    .flexslider .slides .product-story.slider-1 {
+      height: 300px;
+      
+      .product-headline{
+        padding: 10px;
+      }
+      
+      &:after {
+        background-position: 60% 60%;
+        height: 100%;
+      }
+    }
+  
+    .flexslider .slides .product-story.slider-2 {
+      margin-left: 0;
+    }
+  
+    .product-story {
+      margin: 0;
+      margin-bottom: 30px;
+      width: 100% !important;
+    }
+  
+    .storefront {
+      border-top: 1px solid #fff;
+      height: 210px !important;
+      margin: 0;
+      width: 100% !important;
+    
+      .product-headline {
+        background-color: color(transparent-black-6);
+        padding: 10px;
+        
+        div {
+          margin: 0;
+        }
+        
+        .sub-head {
+          font-size: 18px;
+        }
+      }
+    }
+  
+    .internal-promo {
+      .product-headline {
+        background-color: colors(gray-4);
+        color: colors(black);
+      }
+    }
+    
+
+    .half-wide-left,
+    .half-wide-right {
+      height: 300px !important;
+      width: 50% !important;
+      
+      .sub-head {
+        display: none;
+      }
+    }
+  
+    .half-wide-left {
+      border-right: 1px solid #fff;
+    }
+  }
+
+  .home-v3 {
+    .slider-container,
+    .flexslider,
+    .slides {
+      height: auto;
+    }
+    
+    .slider-container {
+      margin-bottom: 50px;
+    }
+    
+    .flexslider .slides li {
+      height: 0;
+      margin: 3% 3% 0;
+      padding-top: 94%;
+      width: 94%;
+      
+      &:after {
+        height: 0;
+        padding-top: 100%;
+      };
+      
+      .product-headline{
+        background-color: colors(transparent-black-6);
+        padding: 10px 10px 6px;
+        
+        .large {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  
+  .home-v4 {
+    .flexslider,
+    .flexslider .slides,
+    .flexslider .slides li {
+      height: 270px;
+    }
+    
+    .flexslider .slides li {
+      margin: 0;
+      
+      .product-headline {
+        padding: 10px 10px 6px;
+      
+        .header-2 {
+          margin-bottom: 0 !important;
+        }
+      }
+    }
+    
+    .flex-viewport {
+      width: 90%;
+      @include prefix("transition",transform 1s ease-in-out);
+    }
+    
+    
+    .product-story {
+      height: 250px;
+      margin: 3% 0 30px;
+      overflow: scroll;
+      -webkit-overflow-scrolling: touch;
+    }
+    
+    .storefront-wrapper {
+      width: 500%;
+    }
+    
+    .storefront.grid_4 {
+      border-right: 3px;
+      float: left;
+      height: 250px;
+      margin: 0;
+      width: 17%;
+    }
+    
+  }
+  
+  
+  .home-v5 {
+    .slider-container {
+      border-bottom: 1px solid #fff;
+      height: 300px;
+    }
+    
+    .flexslider .slides li {
+      margin-bottom: 0;
+    }
+    
+    .product-story {
+      height: 200px;
+      margin: 0 0 30px;
+      overflow-y: hidden;
+      overflow-x: scroll;
+      -webkit-overflow-scrolling:touch;
+      width: 100% !important;
+    }
+    
+    .storefront-wrapper {
+      width: 500%;
+    }
+    
+    .storefront.grid_4 {
+      border-right: 3px;
+      float: left;
+      height: 200px !important;
+      margin: 0;
+      width: 16%;
+      
+      .product-headline {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width: $smallBreakpoint) and (max-width: $largeBreakpoint - 1) {
+  .home-v3 {
+    .flexslider {
+      margin: 0 auto 0 0;
+      width: 85%;
+    }
+  }
+}

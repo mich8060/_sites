@@ -1,0 +1,56 @@
+.sticky-nav {
+  height: 0;
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+  
+  @include prefix("transition", all .5s);
+  
+  &.active {
+    display: none;
+    height: 50px;
+    
+    ul {
+      opacity: 1;
+    }
+  }
+  
+  &.stuck {
+    ul {
+      left: 0;
+      opacity: 1;
+      position: fixed;
+      right: 0;
+      top: 0;
+      z-index: 10000;
+    }
+  }
+  
+  &.active.stuck {
+    @include prefix("transition-delay", 0s);
+  }
+  
+  ul {
+    background-color: rgba(255,255,255,.95);
+    height: 50px;
+    opacity: 0;
+    
+    @include prefix("transition", all .5s);
+  }
+  
+  li {
+    display: inline-block;
+    height: 50px;
+    list-style: none;
+    padding: 10px 10px;
+  }
+}
+
+@media (min-width: $mediumBreakpoint) {
+  .sticky-nav {
+    &.active {
+      display: block;
+    }
+  }
+}
+

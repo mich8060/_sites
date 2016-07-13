@@ -1,0 +1,68 @@
+.vis-nav-link-nav {
+  z-index: 3;
+}
+
+.link-nav-flex-grid {
+  height: 40px;
+  overflow: hidden;
+  
+  @include prefix("transition",height .5s);
+  
+  &.active {
+    /* base: 73, li: 27 */
+    &.height-1 {
+      height: 70px;
+    }
+  
+    &.height-2 {
+      height: 97px;
+    }
+  
+    &.height-3 {
+      height: 124px;
+    }
+  
+    &.height-4 {
+      height: 151px;
+    }
+  
+    &.height-5 {
+      height: 178px;
+    }
+  
+    &.height-6 {
+      height: 205px;
+    }
+  
+    &.height-7 {
+      height: 232px;
+    }
+  
+    &.height-8 {
+      height: 259px;
+    }
+  
+    &.height-9 {
+      height: 286px;
+    }
+  
+    &.height-10 {
+      height: 313px;
+    }
+  }
+  
+  ul {
+    background-color: #fff;
+    margin: 10px 0;
+  }
+    
+  li {
+    list-style: none;
+  }
+  
+  a {
+    color: colors(gray-1);
+    font-size: 15px;
+    text-transform: none;
+  }
+}

@@ -1,0 +1,72 @@
+.shop-look {
+  
+  .masonry {
+    margin-top:40px;
+    width:100% !important;
+    overflow:scroll !important;
+
+    .item,
+    .grid-sizer {
+      cursor:pointer;
+      float:left;
+      font-size:14px;
+      height:125px;
+      width:10%; 
+      
+      .brand,
+      .name,
+      .price {
+        display:block;
+        font-size:14px;
+      }
+      
+      .brand {
+        font-weight:bold;
+      }
+      
+      .price {
+        margin:10px 0;
+      }
+      
+      .equals,
+      .plus {
+        background-position:center center;
+        background-repeat:no-repeat;
+        background-size:24px 24px;
+        height:24px;
+        left:50%;
+        margin:-12px 0 0 -12px;
+        position:absolute;
+        top:35%;
+        width:24px;
+      }
+      
+      .equals {
+        background-image:url('../../../img/ico-24-equals-black@2x.png');
+      }
+      
+      .plus {
+        background-image:url('../../../img/ico-24-plus-black@2x.png');
+      }
+    }
+    
+    .item img {
+      display:block;
+      margin-bottom:20px;
+      width:100%;
+    }
+
+    .w2 { width:20%; }
+    .w3 { width:30%; }
+    .w4 { width:40%; }
+    .w5 { width:50%; }
+    .w6 { width:60%; }
+    .w7 { width:70%; }
+    .w8 { width:80%; }
+    .w9 { width:90%; }
+    .w10 { width:100%; }
+    .w11 { width:91.666666666663%; }
+    .w12 { width:100%; }
+    
+  }
+}

@@ -1,0 +1,148 @@
+.vis-nav-flex-grid {
+  margin: 0 30px;
+  max-width: 1400px;
+  padding: 0 30px;
+  
+  @media (min-width: $xLargeBreakpoint) {
+    margin: 0 auto;
+  };
+  
+  .vis-nav-item {
+    float: left;
+    position: relative;
+    
+    .ratio-wrapper {
+    }
+    
+    .ratio-content {
+      background-size: cover;
+      background-repeat: no-repeat;
+      border: 1px solid colors(gray-3);
+      bottom: 10px;
+      box-sizing: border-box;
+      color: colors(black);
+      cursor: pointer !important;
+      font-size: 23px;
+      left: 10px;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      width: auto;
+      
+      &.center {
+        font-size: 30px;
+        padding-left: 0;
+        text-align: center;
+        padding-top: 50%;
+        width: 100%;
+      }
+      
+      &.bottom {
+        padding-top: 75%;
+        padding-left: 30px;
+      }
+      
+      &.right {
+        padding-top: 48%;
+        padding-left: 62.5%;
+        top: auto;
+      }
+      
+      &.left {
+        padding-top: 48%;
+        padding-left: 30px;
+      }
+    }
+  }
+  
+  .ratio-2x2 {
+    .ratio-wrapper {
+      padding-top: 78.156997%;
+    }
+  }
+
+  .ratio-1x1 {
+    .ratio-wrapper {
+      padding-top: 78.156997%;
+    }
+  }
+
+  .ratio-1x2 {
+    .ratio-wrapper {
+      padding-top: 156.448562%;
+    }
+  
+    .ratio-content.bottom {
+      bottom: 19%;
+    }
+  }
+  
+  .ratio-2x2,
+  .ratio-1x1,
+  .ratio-1x2 {
+    width: 100%;
+  }
+
+  @media (min-width: $smallBreakpoint) {  
+    .ratio-2x2 {
+      width: 66.66666%;
+    }
+  
+    .ratio-1x1,
+    .ratio-1x2 {
+      width: 33.333333%;
+    }
+  }
+  
+  @media (min-width: $largeBreakpoint) {
+    .ratio-2x2 {
+      width: 50%;
+    }
+  
+    .ratio-1x1,
+    .ratio-1x2 {
+      width: 25%;
+    }
+  }
+  
+  .vis-nav-item.vis-nav-full {
+    position: relative;
+    
+    .ratio-content {
+      color: #fff;
+      z-index: 3;
+
+      &:after {
+        background-color: rgba(0,0,0,.2);
+        content: "";
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+      
+        @include prefix("transition",all .35s);
+      };
+    }
+    
+    h2 {
+      left: 0;
+      position: absolute;
+      @include prefix("trasform",translateY(-10px));
+      right: 0;
+      text-align: center;
+      top: 50%;
+      z-index: 2;
+    }
+    
+    &:hover {
+      &:after {
+        background-color: rgba(0,0,0,.4);
+      };
+    }
+  }
+  
+  
+}

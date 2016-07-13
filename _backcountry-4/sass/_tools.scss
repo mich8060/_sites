@@ -1,0 +1,188 @@
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-grey,
+.bg-gray {
+  background-color: colors(gray-4);
+}
+
+.bg-black {
+  background-color: colors(black);
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-blue {
+  color: colors(blue);
+}
+
+.text-promo {
+  background-color: #fff;
+  padding: 10px 0 5px;
+  text-align: center;
+}
+
+.border-grey,
+.border-gray {
+  border: 1px solid colors(gray-4);
+}
+
+.border-black {
+  border: 1px solid colors(black);
+}
+
+.pull-right {
+  float: right !important;
+}
+
+.seperator {
+  color: colors(gray-3);
+  padding: 0 5px;
+}
+
+.icon { 
+  font-family:entypo; 
+}
+
+.btn.icon { 
+  background-size:24px 24px; 
+}
+
+.btn.icon.small { 
+  background-size:12px 12px;
+}
+
+.visible-phone {
+  display: none;
+}
+
+.inline {
+  display: inline !important;
+}
+
+.block {
+  display: block !important;
+}
+
+.rule {
+   border-bottom: 1px solid colors(gray-4);
+}
+
+.clear-both {
+  clear: both;
+}
+
+.clearfix:after {
+  clear: both;
+  content: " ";
+  display: block;
+  height: 0;
+  width: 100%;
+}
+
+/* Handset */
+@media (max-width: $smallBreakpoint - 1) {
+  .visible-large-desktop {
+    display: none !important;
+  }
+  
+  .visible-phone {
+    display: block !important;
+  }
+  
+  .hidden-phone {
+    display: none !important;
+  }
+  
+  .inline-phone {
+    display: inline !important;
+  }
+  
+  .block-phone {
+    display: block !important;
+  }
+  
+  .inline-block-phone {
+    display: inline-block !important;
+  }
+  
+  .hidden-xSmall {
+    display: none !important;
+  }
+}  
+
+/* Small - Medium Breakpoint */
+@media (min-width: $smallBreakpoint) and (max-width: $mediumBreakpoint - 1) {
+  .hidden-small {
+    display: none !important;
+  }
+}
+
+/* Medium - Large Breakpoint */
+@media (min-width: $mediumBreakpoint) and (max-width: $largeBreakpoint - 1) {
+  .hidden-medium {
+    display: none !important;
+  }
+}
+
+/* Large - X-Large Breakpoint */
+@media (min-width: $largeBreakpoint) and (max-width: $xLargeBreakpoint - 1) {
+  .hidden-large {
+    display: none !important;
+  }
+}
+
+/* X-Large + Breakpoint */
+@media (min-width: $xLargeBreakpoint) {
+  .hidden-xLarge {
+    display: none !important;
+  }
+}
+
+/* Tablet */
+@media (min-width: $smallBreakpoint) and (max-width: $largeBreakpoint - 1) {
+  .visible-large-desktop {
+    display: none !important;
+  }
+  
+  .hidden-phone {
+    display: block !important;
+  }
+}
+
+/* Desktop */
+@media (min-width: $largeBreakpoint) and (max-width: $xLargeBreakpoint - 1) {
+  .visible-large-desktop {
+    display: none !important;
+  }
+  
+  .hidden-phone {
+    display: block !important;
+  }
+}
+
+/* Cinematic */
+@media (min-width: $xLargeBreakpoint) {
+  .visible-large-desktop {
+    display: block !important;
+  }
+  
+  .hidden-phone {
+    display: block !important;
+  }
+  .hidden-large-desktop {
+    
+    display: none !important;
+  }
+}

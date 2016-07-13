@@ -1,0 +1,37 @@
+@-webkit-keyframes heart-anim {
+  	55% {
+    	stroke-dashoffset: 308.522;
+    	fill: transparent;
+  	}
+  	70% {
+    	stroke-dashoffset: 0;
+    	fill: transparent;
+  	}
+  	87% {
+    	stroke-dashoffset: 0;
+    	fill:colors(blue);
+  	}
+  	100% {
+    	stroke-dashoffset: 0;
+    	fill:colors(blue);
+  	}
+}
+
+@keyframes heart-anim {
+  	55% {
+    	stroke-dashoffset: 308.522;
+    	fill: transparent;
+  	}
+  	70% {
+    	stroke-dashoffset: 0;
+    	fill: transparent;
+  	}
+  	87% {
+    	stroke-dashoffset: 0;
+    	fill:colors(blue);
+  	}
+  	100% {
+    	stroke-dashoffset: 0;
+    	fill:colors(blue);
+  	}
+}

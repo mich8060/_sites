@@ -1,0 +1,126 @@
+.ratio-content {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.ratio-wrapper {
+  display: block;
+}
+
+.stick-top,
+.stick-bottom {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.stick-bottom {
+  bottom: 0px;
+  top: auto;
+}
+
+.ratio-1x1 {
+  position: relative;
+  
+  .ratio-wrapper {
+    padding-top: 100%;
+  }
+}
+
+.ratio-1x2 {
+  position: relative;
+  
+  .ratio-wrapper {
+    padding-top: 50%;
+  }
+}
+
+.ratio-1x3 {
+  position: relative;
+  
+  .ratio-wrapper {
+    padding-top: 33.333333333%;
+  }
+}
+
+.ratio-1x4 {
+  position: relative;
+  
+  .ratio-wrapper {
+    padding-top: 25%;
+  }
+}
+
+.ratio-1x5 {
+  position: relative;
+  
+  .ratio-wrapper {
+    padding-top: 20%;
+  }
+}
+
+.ratio-1x6 {
+  position: relative;
+  
+  .ratio-wrapper {
+    padding-top: 16.666666666666666%;
+  }
+}
+
+.ratio-2x1 {
+  position: relative;
+  
+  .ratio-wrapper {
+    padding-top: 200%;
+  }
+}
+
+.ratio-2x3 {
+  position: relative;
+  
+  .ratio-wrapper {
+    padding-top: 66.666666666666666%;
+  }
+}
+
+.ratio-2x5 {
+  position: relative;
+  
+  .ratio-wrapper {
+    padding-top: 40%;
+  }
+}
+
+.ratio-3x5 {
+  position: relative;
+  
+  .ratio-wrapper {
+    padding-top: 60%;
+  }
+}
+
+.ratio-4x5 {
+  position: relative;
+  
+  .ratio-wrapper {
+    padding-top: 80%;
+  }
+}
+
+.ratio-3x1 {
+  position: relative;
+  
+  .ratio-wrapper {
+    padding-top: 300%;
+  }
+}
+
+.ratio-3x2 {
+  position: relative;
+  
+  .ratio-wrapper {
+    padding-top: 150%;
+  }
+}
+
